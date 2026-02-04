@@ -1,6 +1,42 @@
-\documentclass{article}
-\usepackage{graphicx} % Required for inserting images
+\documentclass[12pt, a4paper]{article}
+\usepackage[left=1cm, right=1cm, top=1cm, bottom=2cm]{geometry}
+\usepackage{euscript}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{hyperref}   % for clickable links
+\usepackage{float}      % for [H]
+\usepackage{subfiles}   % for using multiple tex files
+\usepackage{tikz}       % for drawing
+\usetikzlibrary{        % for arrow heads and patters
+    patterns,
+    patterns.meta,
+    decorations,
+    arrows,
+    arrows.meta,
+    hobby,
+}
+
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\PP}{\mathbb{P}}
+\setlength{\emergencystretch}{2em}
+\newcounter{mycounter}
+\newcommand\showmycounter{\stepcounter{mycounter}\themycounter}
+
+\newenvironment{problem}[1][]
+{   \begin{center}
+    \begin{tabular}{|p{0.975\textwidth}|}
+    \hline\vspace{-0.2cm}
+    \noindent\textbf{Խնդիր \showmycounter.} {#1}\\
+}
+{  \vspace{0.1cm}\\\hline
+    \end{tabular}
+    \end{center}
+}
 
 \begin{document}
-
+    \subfile{cover-page}
 \end{document}
