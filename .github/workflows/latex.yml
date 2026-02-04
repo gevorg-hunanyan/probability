@@ -17,6 +17,9 @@ jobs:
           root_file: main.tex
           latexmk_use_xelatex: false
 
+      - name: Rename PDF
+        run: mv main.pdf probability.pdf
+
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
