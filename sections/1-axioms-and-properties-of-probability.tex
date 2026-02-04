@@ -1,1 +1,24 @@
 \section{Axioms and Properties of Probability}
+
+\begin{definition}[$\sigma$-algebra]
+    Let $\Omega$ be a nonempty set. A nonempty subset $\mathcal{F}$ of $2^\Omega$ is called a \textit{$\sigma$-algebra} over $\Omega$, if the following two conditions are satisfied:
+    \begin{enumerate}
+        \item If $A\in\mathcal{F}$ then $\overline{A}\in\mathcal{F}$, where $\overline{A}=\Omega\setminus A$.
+        \item If $A_1,A_2,\ldots\in\mathcal{F}$ then $\bigcap_{i=1}^{\infty}A_i\in\mathcal{F}$.
+    \end{enumerate}
+\end{definition}
+
+\begin{definition}[probability]
+    Let $\mathcal{F}$ be a $\sigma$-algebra. A function $\mathbb{P}:\mathcal{F}\rightarrow\mathbb{R}$ is called a \textit{probability measure} on $\mathcal{F}$ (or just \textit{probability}) if the following three conditions are satisfied:
+    \begin{enumerate}
+        \item $\mathbb{P}(A)\ge0$ for all $A\in\mathcal{F}$.
+        \item $\mathbb{P}(\Omega)=1$.
+        \item If $A_1,A_2,\ldots\in\mathcal{F}$ are pairwise disjoint ($A_i\cap A_j=\varnothing$ for all $i\ne j$) then
+        \[
+            \mathbb{P}\left(\bigcup_{i=1}^{\infty}A_i\right) = \sum_{i=1}^{\infty}\mathbb{P}(A_i).
+        \]
+    \end{enumerate}
+\end{definition}
+
+If $\mathcal{F}$ is a $\sigma$-algebra over $\Omega$ then the ordered pair $(\Omega,\mathcal{F})$ is called an \textit{experiment} and if in addition $\mathbb{P}$ is a probability measure on $\mathcal{F}$ then the ordered triple $(\Omega,\mathcal{F},\mathbb{P})$ is called a \textit{probability space}. The set $\Omega$ is called the \textit{sample space} of the experiment and the elements of $\Omega$ are called \textit{elementary outcomes} or just \textit{outcomes}. The elements of $\mathcal{F}$ are called \textit{events}.
+
