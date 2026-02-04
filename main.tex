@@ -25,22 +25,10 @@
 \newcommand{\NN}{\mathbb{N}}
 \newcommand{\CC}{\mathbb{C}}
 \newcommand{\PP}{\mathbb{P}}
-\setlength{\emergencystretch}{2em}
-\newcounter{mycounter}
-\newcommand\showmycounter{\stepcounter{mycounter}\themycounter}
-
-\newenvironment{problem}[1][]
-{   \begin{center}
-    \begin{tabular}{|p{0.975\textwidth}|}
-    \hline\vspace{-0.2cm}
-    \noindent\textbf{Խնդիր \showmycounter.} {#1}\\
-}
-{  \vspace{0.1cm}\\\hline
-    \end{tabular}
-    \end{center}
-}
+%\setlength{\emergencystretch}{2em}
 
 \begin{document}
     \subfile{cover-page}
     \subfile{sections/1-axioms-and-properties-of-probability}
+    \subfile{sections/2-conditional-probability-and-independence}
 \end{document}
