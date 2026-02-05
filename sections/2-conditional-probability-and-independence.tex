@@ -1,3 +1,29 @@
 \newpage
 \section{Conditional Probability and Independence}
 
+\fbox{\begin{minipage}{0.987602233886\linewidth}
+
+    \begin{definition}[conditional probability]
+        Let $(\Omega, \mathcal{F}, \mathbb{P})$ be a probability space and $A, B \subseteq \Omega$ be two events such that $\mathbb{P}(B) \ne 0$. Then the \textit{conditional probability} of $A$ given $B$ (or the probability of $A$ under the condition of $B$) is defined to be
+        \[
+            \mathbb{P}(A|B) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)}.
+        \]
+    \end{definition}
+    
+    \begin{definition}[independence of events]
+        Let $(\Omega, \mathcal{F}, \mathbb{P})$ be a probability space. Events $A, B \subseteq\Omega$ are called \textit{independent} if $\mathbb{P}(A \cap B) = \mathbb{P}(A)\mathbb{P}(B)$ and \textit{dependent} otherwise.
+    \end{definition}
+    
+    The formula of conditional probability can be rearranged to get
+    \[
+        \mathbb{P}(A\cap B) = \mathbb{P}(B)\mathbb{P}(A|B),
+    \]
+    assuming $\mathbb{P}(B)\ne0$ and can be further generalized to get
+    \[
+        \mathbb{P}(A_1\cap A_2\cap \cdots\cap A_n) = \mathbb{P}(A_1)\mathbb{P}(A_2|A_1)\cdots\mathbb{P}(A_n|A_1\cap A_2\cap\cdots\cap A_{n-1}).
+    \]
+    
+    We will call events $A_1, A_2, \ldots, A_n$ \textit{pairwise independent} if any two events chosen from the list are independent, i.e. for $i \ne j$ the identity $\mathbb{P}(A_i \cap A_j) = \mathbb{P}(A_i)\mathbb{P}(A_j)$ holds. We will call events $A_1, A_2, \ldots, A_n$ \textit{mutually independent} if for any subfamily $A_{i_1}, A_{i_2}, \ldots, A_{i_k}$ the identity $\mathbb{P}(A_{i_1} \cap A_{i_2} \cap ... \cap A_{i_k}) = P(A_{i_1})P(A_{i_2})\cdots\mathbb{P}(A_{i_k})$ takes place.
+    
+\end{minipage}}
+
