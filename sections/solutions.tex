@@ -1,10 +1,22 @@
 \newpage
 \section{Solutions}
 
+\begin{sol}{empty-probability}
+    Let $A_n=\varnothing$ for all positive integers $n$ and denote. Then we can use the third axiom (condition) of probability on these sets as they are pairwise disjoint ($\varnothing\cap\varnothing=\varnothing$) to get
+    \[
+        \PP(\varnothing)=\PP\left(\bigcup_{i=1}^{\infty}A_i\right)=\sum_{i=1}^{\infty}\PP(A_i)=\sum_{i=1}^{\infty}\PP(\varnothing),
+    \]
+    therefore $\PP(\varnothing)=0$, because otherwise the sum $\sum_{i=1}^{\infty}\PP(\varnothing)$ would diverge to infinity.
+\end{sol}
+
+\begin{sol}{nonempty-sample-space}
+    According to the previous exercise $\PP(\varnothing)=0$, which would contradict the second axiom of probability, namely $\PP(\Omega)=1$, if $\Omega=\varnothing$.
+\end{sol}
+
 \begin{sol}{coin1}
-    coming soon...
+    We can use the sample space $\Omega=\{H,T\}^3=\{(H,H,H),(H,H,T),\ldots,(T,T,T)\}$, where each elementary outcome has probability $\frac18$. The probability of getting exactly two heads is the probability of the event $\{(H,H,T),(H,T,H),(T,H,H)\}$, which is $\frac38$.
 \end{sol}
 
 \begin{sol}{twodie1}
-    coming soon...
+    One way of modeling this experiment is to use the probability space $(\Omega,\mathcal{F},\PP)$, where $\Omega=\{1,2,\ldots,6\}^2=\{(1,1),(1,2),\ldots,(6,6)\}$, $\mathcal{F}=2^\Omega$, and $\PP(A)=\frac{|A|}{|\Omega|}=\frac{|A|}{36}$ for $A\in\mathcal{F}$. Let $B$ be the event of the sum being $7$. Then $B=\{(1,6),(2,5),(3,4),(4,3),(5,2),(6,1)\}$, and therefore $\PP(B)=\frac{|B|}{36}=\frac{6}{36}=\frac{1}{6}$.
 \end{sol}
