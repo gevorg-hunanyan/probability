@@ -3,13 +3,15 @@
 \usepackage{euscript}
 \usepackage{setspace}
 \usepackage{amsmath}
-\usepackage{enumitem}   % to enumerate across files
-\usepackage{amsfonts,amssymb,amsthm,mathtools} % AMS
-\usepackage{hyperref}   % for clickable links
-\usepackage{float}      % for [H]
-\usepackage{subfiles}   % for using multiple tex files
-\usepackage{tikz}       % for drawing
-\usetikzlibrary{        % for arrow heads and patters
+\usepackage{xparse}
+\usepackage{xcolor}                                     % for colors
+\usepackage{enumitem}                                   % to enumerate across files
+\usepackage{amsfonts,amssymb,amsthm,mathtools}          % AMS
+\usepackage[colorlinks=false]{hyperref}  % for clickable links
+\usepackage{float}                                      % for [H]
+\usepackage{subfiles}                                   % for using multiple tex files
+\usepackage{tikz}                                       % for drawing
+\usetikzlibrary{                                        % for arrow heads and patters
     patterns,
     patterns.meta,
     decorations,
@@ -27,8 +29,32 @@
 \newcommand{\PP}{\mathbb{P}}
 %\setlength{\emergencystretch}{2em}
 
+\setlist[enumerate,1]{label=\textbf{\arabic*.}, ref=\arabic*}
+
+\newcommand{\bluelink}[2]{\hyperref[#1]{\textcolor{blue}{\textbf{#2}}}}
+
+
+\makeatletter
+\newcommand{\IfLabelDefined}[3]{%
+    \@ifundefined{r@#1}{#3}{#2}%
+}
+\makeatother
+\NewDocumentCommand{\prob}{m+m}{%
+    \item\label{prob:#1}%
+    #2%
+    \IfLabelDefined{sol:prob:#1}{\quad\bluelink{sol:prob:#1}{(jump to solution)}}{}%
+}
+\NewDocumentEnvironment{sol}{m +b}{%
+    \par\phantomsection\label{sol:prob:#1}%
+    \noindent\textbf{Solution to Problem~\ref*{prob:#1}.}\par\noindent
+    #2\par
+    \par\noindent\hfill\mbox{\bluelink{prob:#1}{(back to problem)}}\par
+}{}
+
 \begin{document}
     \subfile{cover-page}
     \subfile{sections/1-axioms-and-properties-of-probability}
     \subfile{sections/2-conditional-probability-and-independence}
+
+    \subfile{sections/solutions}
 \end{document}
