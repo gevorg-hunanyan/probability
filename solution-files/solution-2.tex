@@ -6,10 +6,39 @@
 \end{sol}
 
 \begin{sol}{twodice-6-given-sum-8}
+    Let $\Omega=\{1,2,\ldots,6\}^2$, and define the following events:
     \begin{gather*}
         A=\{(1,6),(2,6),(3,6),(4,6),(5,6),(6,6),(6,5),(6,4),(6,3),(6,2),(6,1)\}, \\
         B=\{(2,6),(3,5),(4,4),(5,3),(2,6)\}, \\
-        A\cap B=\{(2,6),(6,2)\}, \\
-        \PP(A\mid B)=\frac{\PP(A\cap B)}{\PP(B)}=\frac{2/36}{5/36}=\frac25.
+        A\cap B=\{(2,6),(6,2)\}.
     \end{gather*}
+    Then
+    \[
+        \PP(A\mid B)=\frac{\PP(A\cap B)}{\PP(B)}=\frac{2/36}{5/36}=\frac25.
+    \]
+\end{sol}
+
+\begin{sol}{threedice-distinct}
+    We will work in $\Omega=\{1,2,\ldots,6\}^3$. Let $A$ be the event that at least one of the dice is showing $6$, and let $B$ be the event that all three dice are showing distinct numbers. Then $|B|=6\cdot5\cdot4=120$ and $|A\cap B|=\binom{5}{2}\cdot3!=10\cdot6=60$.
+    \[
+        \PP(A\mid B)=\frac{\PP(A\cap B)}{\PP(B)}=\frac{60/216}{120/216}=\frac{60}{120}=\frac12.
+    \]
+\end{sol}
+
+\begin{sol}{prove-conditional}
+    Multiplying both sides of $\frac{\PP(A\cap B)}{\PP(B)}=\PP(A\mid B)>\PP(A)$ by $\frac{\PP(B)}{\pp(A)}$ we get
+    \[
+        \PP(B\mid A)=\frac{\PP(A\cap B)}{\PP(A)}=\frac{\PP(B)}{\PP(A)}\frac{\PP(A\cap B)}{\PP(B)}>\frac{\PP(B)}{\PP(A)}\PP(A)=\PP(B).
+    \]
+\end{sol}
+
+\begin{sol}{independent-subset}
+    \[
+        \PP(A)=\PP(A\cap B)=\PP(A)\PP(B)\quad\Longrightarrow\quad \PP(A)(1-\PP(B))=0.
+    \]
+    Therefore $\PP(A)=0$ or $\PP(B)=1$.
+\end{sol}
+
+\begin{sol}{independent-with-itself}
+    Follows from the previous problem as a special case with $B=A$.
 \end{sol}

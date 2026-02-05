@@ -6,7 +6,7 @@
     \begin{definition}[conditional probability]
         Let $(\Omega, \mathcal{F}, \mathbb{P})$ be a probability space and $A, B \subseteq \Omega$ be two events such that $\mathbb{P}(B) \ne 0$. Then the \textit{conditional probability} of $A$ given $B$ (or the probability of $A$ under the condition of $B$) is defined to be
         \[
-            \mathbb{P}(A|B) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)}.
+            \mathbb{P}(A\mid B) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)}.
         \]
     \end{definition}
     
@@ -16,11 +16,11 @@
     
     The formula of conditional probability can be rearranged to get
     \[
-        \mathbb{P}(A\cap B) = \mathbb{P}(B)\mathbb{P}(A|B),
+        \mathbb{P}(A\cap B) = \mathbb{P}(B)\mathbb{P}(A\mid B),
     \]
     assuming $\mathbb{P}(B)\ne0$ and can be further generalized to get
     \[
-        \mathbb{P}(A_1\cap A_2\cap \cdots\cap A_n) = \mathbb{P}(A_1)\mathbb{P}(A_2|A_1)\cdots\mathbb{P}(A_n|A_1\cap A_2\cap\cdots\cap A_{n-1}).
+        \mathbb{P}(A_1\cap A_2\cap \cdots\cap A_n) = \mathbb{P}(A_1)\mathbb{P}(A_2\mid A_1)\cdots\mathbb{P}(A_n\mid A_1\cap A_2\cap\cdots\cap A_{n-1}).
     \]
     
     We will call events $A_1, A_2, \ldots, A_n$ \textit{pairwise independent} if any two events chosen from the list are independent, i.e. for $i \ne j$ the identity $\mathbb{P}(A_i \cap A_j) = \mathbb{P}(A_i)\mathbb{P}(A_j)$ holds. We will call events $A_1, A_2, \ldots, A_n$ \textit{mutually independent} if for any subfamily $A_{i_1}, A_{i_2}, \ldots, A_{i_k}$ the identity $\mathbb{P}(A_{i_1} \cap A_{i_2} \cap ... \cap A_{i_k}) = P(A_{i_1})P(A_{i_2})\cdots\mathbb{P}(A_{i_k})$ takes place.
@@ -30,11 +30,11 @@
 \begin{enumerate}[resume=prob]
     \prob{twodice-5}{Two dice are rolled. Find the probability that both of them show 5, given that the sum of shown numbers is divisible by 5.}
     \prob{twodice-6-given-sum-8}{Two dice are rolled. Find the probability that at least one of them shows 6, given that the sum of shown numbers is 8.}
-    \prob{}{Three dice are rolled. Find the probability of at least one of them showing 6, given that all three of them are showing distinct numbers.}
-    \prob{}{Prove that $\mathbb{P}(B|A)>\mathbb{P}(B)$ given that $\mathbb{P}(A|B)>\mathbb{P}(A)$, $\mathbb{P}(A)\ne0$, $\mathbb{P}(B)\ne0$.}
-    \prob{}{Let $A$ and $B$ be independent events and $A\subseteq B$. Prove that $\mathbb{P}(A)=0$ or $\mathbb{P}(B)=1$.}
-    \prob{}{Prove that if the event $A$ is independent with itself, then $\mathbb{P}(A)=0$ or $\mathbb{P}(A)=1$.}
-    \prob{}{Prove that if $\mathbb{P}(B|A)=\mathbb{P}(B|\overline{A})$ (assuming $\mathbb{P}(A)\ne0$ and $\mathbb{P}(B)\ne0$) then $A$ and $B$ are independent.}
+    \prob{threedice-distinct}{Three dice are rolled. Find the probability of at least one of them showing 6, given that all three of them are showing distinct numbers.}
+    \prob{prove-conditional}{Prove that $\mathbb{P}(B\mid A)>\mathbb{P}(B)$ given that $\mathbb{P}(A\mid B)>\mathbb{P}(A)$, $\mathbb{P}(A)\ne0$, $\mathbb{P}(B)\ne0$.}
+    \prob{independent-subset}{Let $A$ and $B$ be independent events and $A\subseteq B$. Prove that $\mathbb{P}(A)=0$ or $\mathbb{P}(B)=1$.}
+    \prob{independent-with-itself}{Prove that if the event $A$ is independent with itself, then $\mathbb{P}(A)=0$ or $\mathbb{P}(A)=1$.}
+    \prob{}{Prove that if $\mathbb{P}(B\mid A)=\mathbb{P}(B\mid\overline{A})$ (assuming $\mathbb{P}(A)\ne0$ and $\mathbb{P}(B)\ne0$) then $A$ and $B$ are independent.}
     \prob{}{First bowl contains 5 white, 11 black and 8 red balls, second bowl contains 10 white, 8 black and 6 red balls. One ball is taken randomly from each bowl. Find the probability that the chosen balls have the same color.}
     \prob{}{
         Two dice are rolled. Consider the events
