@@ -42,3 +42,47 @@
 \begin{sol}{independent-with-itself}
     Follows from the previous problem as a special case with $B=A$.
 \end{sol}
+
+\begin{sol}{bowl-probabilities}
+    Let $W$, $B$, and $R$ be the events of both balls being white, black, and red, respectively. Each bowl contains $24$ balls, hence we have $\PP(W)=\frac{5\cdot10}{24^2}$, $\PP(B)=\frac{11\cdot8}{24^2}$, and $\PP(R)=\frac{8\cdot6}{24^2}$. These events are disjoint, therefore
+    \[
+        \PP(W\cup B\cup R)=\PP(W)+\PP(B)+\PP(R)=\frac{5\cdot10+11\cdot8+8\cdot6}{24^2}=\frac{186}{576}=\frac{31}{96}.
+    \]
+\end{sol}
+
+\begin{sol}{pairwise-not-mutual}
+    It's easy to see that $\PP(A_1\cap A_2) = \frac{3\cdot3}{6} = \frac36\cdot\frac36 = \PP(A_1)\cdot\PP(A_2)$ and $A_1\cap A_3 = A_2\cap A_3$, which implies that these events are pairwise independent, but not mutually independent, because $A_1\cap A_2\cap A_3=A_1\cap A_2$ (since even+odd is always odd), therefore
+    \[
+        \PP(A_1\cap A_2\cap A_3)=\PP(A_1\cap A_2)=\frac14\ne\frac12\cdot\frac12\cdot\frac12=\PP(A_1)\PP(A_2)\PP(A_3).
+    \]
+\end{sol}
+
+\begin{sol}{not-all-same}
+    If $A$ is the desired event, then $\PP(A)=1-\PP(\overline{A})=1-\left(\frac{\binom{3}{3}}{\binom{10}{3}}+\frac{\binom{5}{3}}{\binom{10}{3}}\right)=1-\left(\frac{1}{120}+\frac{11}{120}\right)=\frac{109}{120}$.
+\end{sol}
+
+\begin{sol}{two-shooters}
+    We assume the events $A_1$ and $A_2$, of first and second shooters hitting the target, are independent. The probability that the target was hit at least once is then
+    \begin{multline*}
+        \PP(\text{hit at least once})=1-\PP(\text{both miss})=1-\PP(\overline{A_1}\cap\overline{A_2})=1-\PP(\overline{A_1})\PP(\overline{A_2})\\=1-0.3\cdot0.2=1-0.06=0.94,
+    \end{multline*}
+    and the probability of exactly one hit is
+    \begin{multline*}
+        \PP(\text{exactly one hit})=\PP\left((A_1\cap\overline{A_2})\cup(\overline{A_1}\cap A_2)\right)=\PP(A_1\cap\overline{A_2})+\PP(\overline{A_1}\cap A_2)\\=\PP(A_1)\PP(\overline{A_2})+\PP(\overline{A_1})\PP(A_2)=0.7\cdot0.2+0.3\cdot0.8=0.14+0.24=0.38.
+    \end{multline*}
+\end{sol}
+
+\begin{sol}{five-points-circle-square}
+    Let the radius of the circle be $r$. The diagonal of an inscribed square is $2r$, side length is $\sqrt{2}r$, and the area is $S_\square=(\sqrt{2}r)^2=2r^2$. The area of the circle is $S_\bigcirc=\pi r^2$, hence
+    \[
+        p=\PP(\text{point in square})=\frac{2r^2}{\pi r^2}=\frac{2}{\pi}.
+    \]
+    The region outside the square is composed of 4 segments of equal area, that add up to $\pi r^2-2r^2$, so each one has area $\frac{\pi r^2-2r^2}{4}$. Therefore
+    \[
+        q=\PP(\text{point in a chosen segment})=\frac{\pi r^2-2r^2}{4\pi r^2}=\frac{\pi-2}{4\pi}.
+    \]
+    The desired probability is
+    \[
+        \binom{5}{1}\cdot p\cdot 4!\cdot q^4 = 120\cdot\frac{2}{\pi}\left(\frac{\pi-2}{4\pi}\right)^4.
+    \]
+\end{sol}
