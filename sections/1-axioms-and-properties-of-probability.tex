@@ -32,4 +32,95 @@ If $\mathcal{F}$ is a $\sigma$-algebra over $\Omega$ then the ordered pair $(\Om
     \prob{nonempty-sample-space}{Explain why we require the sample space $\Omega$ to be nonempty.}
     \prob{coin1}{A fair coin is tossed three times. Model the experiment and describe the sample space. Find the probability of getting exactly two heads.}
     \prob{twodie1}{Two fair six-sided dice are rolled. Describe the probability space. Find the probability that their sum is $7$.}
+    \prob{monotonicity}{Prove the monotonicity of probabilty: $A\subseteq B\;\Longrightarrow\;\mathbb{P}(A)\le\mathbb{P}(B)$ for all $A,B\in\mathcal{F}$.}
+    \prob{cointwoconsec53}{
+        Consider the following experiment: A coin is tossed until we get two consecutive Tails. Describe the following events:
+        \begin{enumerate}
+            \item $A$ - The number of tosses is 5.
+            \item $B$ - Heads came up at most 3 times.
+        \end{enumerate}
+    }
+    \prob{complement-probability}{Prove that $\mathbb{P}(\overline{A})=1-\mathbb{P}(A)$ for all $A\in\mathcal{F}$.}
+    \prob{shopofsamplespaces}{
+        The shop of sample spaces is open from $10:00$ to $20:00$. A student enters and leaves the shop at $x$ and $y$ hours after the opening, respectively. Describe the sample space $\Omega$ using elementary outcomes as $(x,y)$ pairs. Use the geometric probability model, draw $\Omega$ and the following events:
+        \begin{enumerate}
+            \item The student was in the shop for no more than 2 hours.
+            \item The student was in the shop at $15:00$.
+            \item The student was in the shop for the entire period from $14:00$ to $16:00$.
+            \item The student was in the shop at some point between $14:00$ and $16:00$.
+            \item The student's entering time is closer to the opening time, than leaving time to the closing time.
+        \end{enumerate}
+    }
+    \prob{shopofsamplespaces2}{Calculate the probabilities of each event in the previous problem.}
+    \prob{shootingthreetimes}{
+        Consider the experiment of shooting at a target three times. Let $A_i$ ($i=1,2,3$) be the event of $i$-th bullet hitting the target. Describe the following events using the events $A_i$:
+        \begin{enumerate}
+            \item The target was hit all three times.
+            \item The target was hit at least twice.
+            \item The target was hit exactly twice.
+            \item the target was hit at least once.
+            \item The target was hit exactly once.
+            \item The target was not hit.
+            \item The target was hit an even number of times.
+            \item The target was hit an odd number of times.
+        \end{enumerate}
+    }
+    \prob{geom1}{Let $A=\{(x,y)\in\Omega\;\vert\; x+y<1\}$ and $B=\{(x,y)\in\Omega\;\vert\;y\le x^2\}$ be events of the sample space $\Omega=[0,1]\times[0,1]$. Draw on the plane the events $A\cup B$, $A\cap B$, $A\setminus B$ $\overline{A}\cup\overline{B}$. Find the probabilities of each of these events in the geometric probability model.}
+    \prob{finiteadd}{
+        Prove the finite additivity of probability: If the events $A_1,A_2,\ldots,A_n\in\mathcal{F}$ are pairwise disjoint, then
+        \[
+            \mathbb{P}\left(\bigcup_{i=1}^{n}A_i\right) = \sum_{i=1}^{n}\mathbb{P}(A_i).
+        \]
+    }
+    \prob{polynom1}{
+        Consider the equation $ax^2+bx+c=0$. Let the coefficients $a,b,c$ be decided as the result of throwing a fair die three times. Find the probability that
+        \begin{enumerate}
+            \item the roots of the equation are real.
+            \item the roots of the equation are rational.
+        \end{enumerate}
+    }
+    \prob{inclusion-exclusion-simple}{Prove that $\mathbb{P}(A\cup B) = \mathbb{P}(A)+\mathbb{P}(B)-\mathbb{P}(A\cap B)$.}
+    \prob{weirdlimit}{Find the probability $p_n$ that a randomly chosen number from the set $\{1,2,\ldots,n\}$ is divisible by a fixed positive integer $k$. Find $\displaystyle\lim_{n\rightarrow\infty}p_n$.}
+    \prob{union-bound}{
+        Prove the union bound (Boole's inequality):
+        \[
+            \mathbb{P}\left(\bigcup_{i=1}^{\infty}A_i\right)\le\sum_{i=1}^{\infty}\mathbb{P}(A_i).
+        \]
+    }
+    \prob{unit-circle-square}{A point is chosen randomly inside the unit circle. Find the probability that the chosen point is inside a fixed square inscribed in the circle. Use the geometric probability model.}
+    \prob{geometric4d}{Two points are randomly chosen in $\Omega=[0,1]$. Find the probability that the distance between those points is less than $\alpha\in(0,1)$. Use the geometric probability model.}
+    \prob{polynom2}{
+        Find the probability that the roots of the equation $x^2+ax+b=0$ are
+        \begin{enumerate}
+            \item real,
+            \item positive,
+        \end{enumerate}
+        if the coefficients $0\le a\le 1$ and $0\le b\le 1$ are chosen randomly. Use the geometric probability model.
+    }
+    \prob{polynom3}{
+        Find the probability that the roots of the equation $x^2+2ax+b=0$ are
+        \begin{enumerate}
+            \item real,
+            \item positive,
+        \end{enumerate}
+        if the coefficients are chosen randomly and $|a|\le1$, $|b|\le1$.
+    }
+    \prob{incl-excl-proof}{
+        Prove the inclusion-exclusion principle for probability:
+        \[
+            \mathbb{P}\left(\bigcup_{i=1}^{n}A_i\right) = \sum_{i=1}^{n}\left((-1)^{i-1}\sum_{k_1<\ldots<k_i} \bigcup_{l=1}^{i}A_l\right)
+        \]
+    }
+    \prob{stick-break-triangle}{
+        A stick of length 1 is randomly broken into three pieces. Find the probability that those three pieces can form a triangle. Use the geometric probability model.
+    }
+    \prob{continuity}{
+        Prove the continuity of probability for increasing sequences: if $A_1\subseteq A_2\subseteq\ldots$ then
+        \[
+            \mathbb{P}\left(\bigcup_{i=1}^{\infty}A_i\right) = \lim_{n\rightarrow\infty}\mathbb{P}(A_n).
+        \]
+    }
+    \prob{five-envelopes}{There are 5 different letters and 5 different envelopes. Each letter is placed in an envelope at random. What is the probability that no letter is placed in its correct envelope?}
+    \prob{polynom4}{Find the probability of the roots of the equation $ax^2+bx+c=0$ being real if the coefficients are chosen randomly in the cube $0<a\le1$, $0<b\le1$, $0<c\le1$. Use the geometric probability model.}
+    \prob{nonmeasurable}{Prove that it is not possible to define a probability on the experiment $([0,1],2^{[0,1]})$ such that the probability of any interval is its length.}
 \end{enumerate}
