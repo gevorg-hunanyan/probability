@@ -17,3 +17,11 @@
 \begin{sol}{twodie1}
     One way of modeling this experiment is to use the probability space $(\Omega,\mathcal{F},\PP)$, where $\Omega=\{1,2,\ldots,6\}^2=\{(1,1),(1,2),\ldots,(6,6)\}$, $\mathcal{F}=2^\Omega$, and $\PP(A)=\frac{|A|}{|\Omega|}=\frac{|A|}{36}$ for $A\in\mathcal{F}$. Let $B$ be the event of the sum being $7$. Then $B=\{(1,6),(2,5),(3,4),(4,3),(5,2),(6,1)\}$, and therefore $\PP(B)=\frac{|B|}{36}=\frac{6}{36}=\frac{1}{6}$.
 \end{sol}
+
+\begin{sol}{monotonicity}
+    Set $A_1=A$, $A_2=B\setminus A$, and $A_i=\varnothing$ for all integers $i\ge3$. Then the events $A_i$ are pairwise disjoint and $\bigcup_{i=1}^{\infty}A_i=A\cup(B\setminus A)=B$, so it follows from the third axiom of probability that
+    \[
+        \PP(B)=\PP\left(\bigcup_{i=1}^{\infty}A_i\right)=\sum_{i=1}^{\infty}\PP(A_i)=\PP(A)+\PP(B\setminus A)+0+0+\cdots=\PP(A)+\PP(B\setminus A),
+    \]
+    which means that $\PP(B)\ge\PP(A)$ because $\PP(B\setminus A)\ge0$ according to the first axiom of probability.
+\end{sol}
