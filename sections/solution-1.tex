@@ -25,3 +25,26 @@
     \]
     which means that $\PP(B)\ge\PP(A)$ because $\PP(B\setminus A)\ge0$ according to the first axiom of probability.
 \end{sol}
+
+\begin{sol}{cointwoconsec53}
+    Let $\Omega=\{TT,HTT,THTT,HHTT,HTHTT,THHTT,HHHTT,\ldots\}$. Here
+    \begin{align*}
+        A=\{&HTHTT,THHTT,HHHTT\},\\
+        B=\{&TT,HTT,THTT,HHTT,HTHTT,THHTT,\\&HHHTT,HHTHTT,HTHHTT,THHHTT\}.
+    \end{align*}
+\end{sol}
+
+\begin{sol}{finiteadd}
+    Define $A_i=\varnothing$ for all integers $i\ge n+1$. Then using the third axiom of probability we get
+    \[
+        \PP\left(\bigcup_{i=1}^{n}A_i\right)=\PP\left(\bigcup_{i=1}^{\infty}A_i\right)=\sum_{i=1}^{\infty}\PP(A_i)=\sum_{i=1}^{n}\PP(A_i).
+    \]
+\end{sol}
+
+\begin{sol}{complement-probability}
+    We have already established finite additivity in Problem~\ref{prob:finiteadd}, which impllies that
+    \[
+        \PP(A)+\PP(\overline{A})=\PP(A\cup\overline{A})=\PP(\Omega)=1,
+    \]
+    hence $\PP(\overline{A})=1-\PP(A)$.
+\end{sol}

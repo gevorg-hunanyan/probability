@@ -40,7 +40,12 @@ If $\mathcal{F}$ is a $\sigma$-algebra over $\Omega$ then the ordered pair $(\Om
             \item $B$ - Heads came up at most 3 times.
         \end{enumerate}
     }
-    \prob{complement-probability}{Prove that $\mathbb{P}(\overline{A})=1-\mathbb{P}(A)$ for all $A\in\mathcal{F}$.}
+    \prob{finiteadd}{
+        Prove the finite additivity of probability: If the events $A_1,A_2,\ldots,A_n\in\mathcal{F}$ are pairwise disjoint, then
+        \[
+            \mathbb{P}\left(\bigcup_{i=1}^{n}A_i\right) = \sum_{i=1}^{n}\mathbb{P}(A_i).
+        \]
+    }
     \prob{shopofsamplespaces}{
         The shop of sample spaces is open from $10:00$ to $20:00$. A student enters and leaves the shop at $x$ and $y$ hours after the opening, respectively. Describe the sample space $\Omega$ using elementary outcomes as $(x,y)$ pairs. Use the geometric probability model, draw $\Omega$ and the following events:
         \begin{enumerate}
@@ -51,7 +56,8 @@ If $\mathcal{F}$ is a $\sigma$-algebra over $\Omega$ then the ordered pair $(\Om
             \item The student's entering time is closer to the opening time, than leaving time to the closing time.
         \end{enumerate}
     }
-    \prob{shopofsamplespaces2}{Calculate the probabilities of each event in the previous problem.}
+    \prob{shopofsamplespaces2}{Find the probabilities of each event in the previous problem.}
+    \prob{complement-probability}{Prove that $\mathbb{P}(\overline{A})=1-\mathbb{P}(A)$ for all $A\in\mathcal{F}$.}
     \prob{shootingthreetimes}{
         Consider the experiment of shooting at a target three times. Let $A_i$ ($i=1,2,3$) be the event of $i$-th bullet hitting the target. Describe the following events using the events $A_i$:
         \begin{enumerate}
@@ -66,12 +72,6 @@ If $\mathcal{F}$ is a $\sigma$-algebra over $\Omega$ then the ordered pair $(\Om
         \end{enumerate}
     }
     \prob{geom1}{Let $A=\{(x,y)\in\Omega\;\vert\; x+y<1\}$ and $B=\{(x,y)\in\Omega\;\vert\;y\le x^2\}$ be events of the sample space $\Omega=[0,1]\times[0,1]$. Draw on the plane the events $A\cup B$, $A\cap B$, $A\setminus B$ $\overline{A}\cup\overline{B}$. Find the probabilities of each of these events in the geometric probability model.}
-    \prob{finiteadd}{
-        Prove the finite additivity of probability: If the events $A_1,A_2,\ldots,A_n\in\mathcal{F}$ are pairwise disjoint, then
-        \[
-            \mathbb{P}\left(\bigcup_{i=1}^{n}A_i\right) = \sum_{i=1}^{n}\mathbb{P}(A_i).
-        \]
-    }
     \prob{polynom1}{
         Consider the equation $ax^2+bx+c=0$. Let the coefficients $a,b,c$ be decided as the result of throwing a fair die three times. Find the probability that
         \begin{enumerate}
