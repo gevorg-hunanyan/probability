@@ -41,6 +41,145 @@
     \]
 \end{sol}
 
+\begin{sol}{shopofsamplespaces}
+     The sample space is the triangle $\Omega=\{(x,y)\mid 10\le x\le y\le 20\}$.
+    \noindent
+    \begin{center}
+    \begin{tabular}{cc}
+    
+    \begin{minipage}{0.45\textwidth}
+    \hphantom{(a)}\hspace{4pt}
+    \begin{tikzpicture}[x=0.45cm,y=0.45cm,baseline=(current bounding box.center)]
+        \draw[->] (0,0) -- (12,0) node[below] {$x$};
+        \draw[->] (0,0) -- (0,12) node[left] {$y$};
+        \draw (5,5) -- (10,10) -- (5,10) -- cycle;
+        \draw[dotted] (5,0) -- (5,5);
+        \draw[dotted] (0,5) -- (5,5);
+        \draw[dotted] (10,0) -- (10,10);
+        \draw[dotted] (0,10) -- (5,10);
+        \node[left] at (0,10) {$20$};
+        \node[left] at (0,5) {$10$};
+        \node[below] at (10.25,0) {$20$};
+        \node[below] at (5,0) {$10$};
+        \filldraw[blue, very thick, fill opacity=0.3] (5,5) -- (10,10) -- (5,10) -- cycle;
+        \node at (6.5,8.5) {\huge $\Omega$};
+    \end{tikzpicture}
+    \end{minipage}
+    &
+    \begin{minipage}{0.45\textwidth}
+    \textbf{(a)}\hspace{4pt}
+    \begin{tikzpicture}[x=0.45cm,y=0.45cm,baseline=(current bounding box.center)]
+        \draw[->] (0,0) -- (12,0) node[below] {$x$};
+        \draw[->] (0,0) -- (0,12) node[left] {$y$};
+        \draw (5,5) -- (10,10) -- (5,10) -- cycle;
+        \draw[dotted] (5,0) -- (5,5);
+        \draw[dotted] (0,5) -- (5,5);
+        \draw[dotted] (10,0) -- (10,10);
+        \draw[dotted] (0,10) -- (5,10);
+        \node[left] at (0,10) {$20$};
+        \node[left] at (0,5) {$10$};
+        \node[below] at (10.25,0) {$20$};
+        \node[below] at (5,0) {$10$};
+        \filldraw[blue, very thick, fill opacity=0.3] (5,5) -- (10,10) -- (9,10) -- (5,6) -- cycle;
+        \draw[dotted] (0,6) -- (5,6);
+        \draw[dotted] (9,0) -- (9,9);
+        \node[left] at (0,6) {$12$};
+        \node[below] at (8.75,0) {$18$};
+    \end{tikzpicture}
+    \end{minipage}
+    \\[8mm]
+    \begin{minipage}{0.45\textwidth}
+    \textbf{(b)}\hspace{4pt}
+    \begin{tikzpicture}[x=0.45cm,y=0.45cm,baseline=(current bounding box.center)]
+        \draw[->] (0,0) -- (12,0) node[below] {$x$};
+        \draw[->] (0,0) -- (0,12) node[left] {$y$};
+        \draw (5,5) -- (10,10) -- (5,10) -- cycle;
+        \draw[dotted] (5,0) -- (5,5);
+        \draw[dotted] (0,5) -- (5,5);
+        \draw[dotted] (10,0) -- (10,10);
+        \draw[dotted] (0,10) -- (5,10);
+        \node[left] at (0,10) {$20$};
+        \node[left] at (0,5) {$10$};
+        \node[below] at (10,0) {$20$};
+        \node[below] at (5,0) {$10$};
+        \filldraw[blue, very thick, fill opacity=0.3] (5,10) -- (7.5,10) -- (7.5,7.5) -- (5,7.5) -- cycle;
+        \draw[dotted] (7.5,0) -- (7.5,7.5);
+        \draw[dotted] (0,7.5) -- (5,7.5);
+        \node[left] at (0,7.5) {$15$};
+        \node[below] at (7.5,0) {$15$};
+    \end{tikzpicture}
+    \end{minipage}
+    &
+    \begin{minipage}{0.45\textwidth}
+    \textbf{(c)}\hspace{4pt}
+    \begin{tikzpicture}[x=0.45cm,y=0.45cm,baseline=(current bounding box.center)]
+        \draw[->] (0,0) -- (12,0) node[below] {$x$};
+        \draw[->] (0,0) -- (0,12) node[left] {$y$};
+        \draw (5,5) -- (10,10) -- (5,10) -- cycle;
+        \draw[dotted] (5,0) -- (5,5);
+        \draw[dotted] (0,5) -- (5,5);
+        \draw[dotted] (10,0) -- (10,10);
+        \draw[dotted] (0,10) -- (5,10);
+        \node[left] at (0,10) {$20$};
+        \node[left] at (0,5) {$10$};
+        \node[below] at (10,0) {$20$};
+        \node[below] at (5,0) {$10$};
+        \filldraw[blue, very thick, fill opacity=0.3] (5,10) -- (7,10) -- (7,8) -- (5,8) -- cycle;
+        \draw[dotted] (7,0) -- (7,8);
+        \draw[dotted] (0,8) -- (5,8);
+        \node[left] at (0,8) {$16$};
+        \node[below] at (7,0) {$14$};
+    \end{tikzpicture}
+    \end{minipage}
+    \\[8mm]
+    \begin{minipage}{0.45\textwidth}
+    \textbf{(d)}\hspace{4pt}
+    \begin{tikzpicture}[x=0.45cm,y=0.45cm,baseline=(current bounding box.center)]
+        \draw[->] (0,0) -- (12,0) node[below] {$x$};
+        \draw[->] (0,0) -- (0,12) node[left] {$y$};
+        \draw (5,5) -- (10,10) -- (5,10) -- cycle;
+        \draw[dotted] (5,0) -- (5,5);
+        \draw[dotted] (0,5) -- (5,5);
+        \draw[dotted] (10,0) -- (10,10);
+        \draw[dotted] (0,10) -- (5,10);
+        \node[left] at (0,10) {$20$};
+        \node[left] at (0,5) {$10$};
+        \node[below] at (10,0) {$20$};
+        \node[below] at (5,0) {$10$};
+        \filldraw[blue, very thick, fill opacity=0.3] (5,10) -- (8,10) -- (8,8) -- (7,7) -- (5,7) -- cycle;
+        \draw[dotted] (8,0) -- (8,8);
+        \draw[dotted] (0,7) -- (5,7);
+        \node[left] at (0,7) {$14$};
+        \node[below] at (8,0) {$16$};
+    \end{tikzpicture}
+    \end{minipage}
+    &
+    \begin{minipage}{0.45\textwidth}
+    \textbf{(e)}\hspace{4pt}
+    \begin{tikzpicture}[x=0.45cm,y=0.45cm,baseline=(current bounding box.center)]
+        \draw[->] (0,0) -- (12,0) node[below] {$x$};
+        \draw[->] (0,0) -- (0,12) node[left] {$y$};
+        \draw (5,5) -- (10,10) -- (5,10) -- cycle;
+        \draw[dotted] (5,0) -- (5,5);
+        \draw[dotted] (0,5) -- (5,5);
+        \draw[dotted] (10,0) -- (10,10);
+        \draw[dotted] (0,10) -- (5,10);
+        \node[left] at (0,10) {$20$};
+        \node[left] at (0,5) {$10$};
+        \node[below] at (10,0) {$20$};
+        \node[below] at (5,0) {$10$};
+        \filldraw[blue, very thick, fill opacity=0.3] (5,5) -- (7.5,7.5) -- (5,10) -- cycle;
+        \draw[dotted] (7.5,0) -- (7.5,7.5);
+        \draw[dotted] (0,7.5) -- (5,7.5);
+        \node[left] at (0,7.5) {$15$};
+        \node[below] at (7.5,0) {$15$};
+    \end{tikzpicture}
+    \end{minipage}
+    \end{tabular}
+    \end{center}
+    (try to find mathematical justifications for these shapes).
+\end{sol}
+
 \begin{sol}{complement-probability}
     We have already established finite additivity in Problem~\ref{prob:finiteadd}, which impllies that
     \[
