@@ -3,9 +3,11 @@ name: Build & Publish PDF
 on:
   push:
     branches: [ main ]
+    paths-ignore:
+      - "README.md"
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -21,6 +23,51 @@ jobs:
 
       - name: Rename PDF
         run: mv main.pdf probability.pdf
+
+      - name: Update README link with commit hash (cache-bust)
+        env:
+          SHA: ${{ github.sha }}
+          REPO: ${{ github.repository }}  # owner/repo
+        run: |
+          python3 - <<'PY'
+          import os, re
+
+          sha = os.environ["SHA"]
+          owner, repo = os.environ["REPO"].split("/", 1)
+
+          # GitHub Pages URL for project pages:
+          url = f"https://{owner}.github.io/{repo}/probability.pdf?rev={sha}"
+
+          with open("README.md", "r", encoding="utf-8") as f:
+              s = f.read()
+
+          pattern = r"<!-- PDF_LINK_START -->.*?<!-- PDF_LINK_END -->"
+          replacement = f"<!-- PDF_LINK_START -->\n[Latest PDF]({url})\n<!-- PDF_LINK_END -->"
+
+          if not re.search(pattern, s, flags=re.S):
+              raise SystemExit("Marker block not found in README.md")
+
+          s2 = re.sub(pattern, replacement, s, flags=re.S)
+
+          if s2 != s:
+              with open("README.md", "w", encoding="utf-8") as f:
+                  f.write(s2)
+              print("README updated.")
+          else:
+              print("No README change needed.")
+          PY
+
+      - name: Commit README (if changed)
+        run: |
+          if git diff --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "Update Latest PDF link"
+          git push
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
