@@ -42,7 +42,7 @@ jobs:
               s = f.read()
 
           pattern = r"<!-- PDF_LINK_START -->.*?<!-- PDF_LINK_END -->"
-          replacement = f"<!-- PDF_LINK_START -->[Latest PDF]({url})<!-- PDF_LINK_END -->"
+          replacement = f"<!-- PDF_LINK_START -->[the latest PDF]({url})<!-- PDF_LINK_END -->"
 
           if not re.search(pattern, s, flags=re.S):
               raise SystemExit("Marker block not found in README.md")
