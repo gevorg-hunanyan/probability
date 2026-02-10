@@ -187,3 +187,19 @@
     \]
     hence $\PP(\overline{A})=1-\PP(A)$.
 \end{sol}
+
+\begin{sol}{shootingthreetimes}
+    \begin{enumerate}
+        \item[(a)] $\PP(\text{3 hits}) = \PP(A_1\cap A_2\cap A_3) = P_1P_2P_3$.
+        \item[(b)] $\PP(\text{2 hits}) = \PP(A_1\cap A_2\cap\overline{A_3}) + \PP(A_1\cap\overline{A_2}\cap A_3) + \PP(\overline{A_1}\cap A_2\cap A_3) = \\
+        \hphantom{\PP(\text{2 hits})} = P_1P_2(1-P_3) + P_1(1-P_2)P_3 + (1-P_1)P_2P_3$.
+        \item[(c)] $\PP(\text{at least 2 hits}) = \PP(\text{3 hits}) + \PP(\text{2 hits}) = \\
+        \hphantom{\PP(\text{at least 2 hits})} = P_1P_2P_3 + P_1P_2(1-P_3) + P_1(1-P_2)P_3 + (1-P_1)P_2P_3$.
+        \item[(d)] $\PP(\text{0 hits}) = \PP(\overline{A_1}\cap\overline{A_2}\cap\overline{A_3})=(1-P_1)(1-P_2)(1-P_3)$.
+        \item[(e)] $\PP(\text{at lease 1 hit})=1-\PP(\text{0 hits})=1-(1-P_1)(1-P_2)(1-P_3)$.
+        \item[(f)] $\PP(\text{even hits})=\PP(\text{0 hits})+\PP(\text{2 hits})=\\
+        \hphantom{\PP(\text{even hits})}=(1-P_1)(1-P_2)(1-P_3)+P_1P_2(1-P_3) + P_1(1-P_2)P_3 + (1-P_1)P_2P_3$.
+        \item[(g)] $\PP(\text{odd hits})=\PP(\text{1 hit})+\PP(\text{3 hits})=\\
+        \hphantom{\PP(\text{odd hits})}=P_1P_2P_3+P_1(1-P_2)(1-P_3)+(1-P_1)P_2(1-P_3)+(1-P_1)(1-P_2)P_3$.
+    \end{enumerate}
+\end{sol}
