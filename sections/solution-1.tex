@@ -203,3 +203,134 @@
         \hphantom{\PP(\text{odd hits})}=P_1(1-P_2)(1-P_3)+(1-P_1)P_2(1-P_3)+(1-P_1)(1-P_2)P_3+P_1P_2P_3$.
     \end{enumerate}
 \end{sol}
+
+\begin{sol}{geom1}
+    The events $A$, $B$, $A\cup B$, $A\cap B$, $A\setminus B$, $\overline{A}\cup\overline{B}$ are shown below.
+    Note that the condition $x+y\le1$ is equivalent to $y\le1-x$, hence $A$ is the region under the curve $y=1-x$, and $B$ is the region under $y=x^2$.
+    \begin{center}
+    \begin{tabular}{ccc}
+    
+    \begin{minipage}{0.3\textwidth}
+    \begin{tikzpicture}[x=0.3cm,y=0.3cm,baseline=(current bounding box.center)]
+        \draw[->] (0,0) -- (12,0) node[below] {$x$};
+        \draw[->] (0,0) -- (0,12) node[left] {$y$};
+        \node[left] at (0,10) {$1$};
+        \node[below] at (10,0) {$1$};
+        \filldraw[blue, very thick, fill opacity=0.3]
+            (0,0) -- (10,0) -- (0,10) -- cycle;
+        \node at (5,9) {\large $A$};
+    \end{tikzpicture}
+    \end{minipage}
+    &
+    \begin{minipage}{0.3\textwidth}
+    \begin{tikzpicture}[x=0.3cm,y=0.3cm,baseline=(current bounding box.center)]
+        \draw[->] (0,0) -- (12,0) node[below] {$x$};
+        \draw[->] (0,0) -- (0,12) node[left] {$y$};
+        \node[left] at (0,10) {$1$};
+        \node[below] at (10,0) {$1$};
+        \filldraw[blue, very thick, fill opacity=0.3, samples=20, domain=0:10]
+            plot (\x, {\x*\x/10}) -- (10,0) -- (0,0) -- cycle;
+        \node at (5,9) {\large $B$};
+    \end{tikzpicture}
+    \end{minipage}
+    &
+    \begin{minipage}{0.3\textwidth}
+    \begin{tikzpicture}[x=0.3cm,y=0.3cm,baseline=(current bounding box.center)]
+        \draw[->] (0,0) -- (12,0) node[below] {$x$};
+        \draw[->] (0,0) -- (0,12) node[left] {$y$};
+        \node[left] at (0,10) {$1$};
+        \node[below] at (10,0) {$1$};
+        \pgfmathsetmacro\xa{-5 + 5*sqrt(5)}
+        \filldraw[blue, very thick, fill opacity=0.3, samples=20]
+            (0,0) -- (10,0) -- plot[domain=10:\xa] (\x, {\x*\x/10}) -- plot[domain=\xa:0] (\x, {10-\x}) -- cycle;
+        \node at (5,9) {\large $A\cup B$};
+        \pgfmathsetmacro\ya{10 - \xa}
+        \draw[dotted] (\xa,\ya) -- (\xa,0);
+        \draw[dotted] (\xa,\ya) -- (0,\ya);
+        \node[left] at (0,\ya) {$y_*$};
+        \node[below] at (\xa,0) {$x_*$};
+    \end{tikzpicture}
+    \end{minipage}
+    \\[8mm]
+    \begin{minipage}{0.3\textwidth}
+    \begin{tikzpicture}[x=0.3cm,y=0.3cm,baseline=(current bounding box.center)]
+        \draw[->] (0,0) -- (12,0) node[below] {$x$};
+        \draw[->] (0,0) -- (0,12) node[left] {$y$};
+        \node[left] at (0,10) {$1$};
+        \node[below] at (10,0) {$1$};
+        \pgfmathsetmacro\xa{-5 + 5*sqrt(5)}
+        \filldraw[blue, very thick, fill opacity=0.3, samples=20, domain=0:\xa]
+            (0,0) -- plot (\x, {\x*\x/10}) -- (10,0) -- cycle;
+        \node at (5,9) {\large $A\cap B$};
+        \pgfmathsetmacro\ya{10 - \xa}
+        \draw[dotted] (\xa,\ya) -- (\xa,0);
+        \draw[dotted] (\xa,\ya) -- (0,\ya);
+        \node[left] at (0,\ya) {$y_*$};
+        \node[below] at (\xa,0) {$x_*$};
+    \end{tikzpicture}
+    \end{minipage}
+    &
+    \begin{minipage}{0.3\textwidth}
+    \begin{tikzpicture}[x=0.3cm,y=0.3cm,baseline=(current bounding box.center)]
+        \draw[->] (0,0) -- (12,0) node[below] {$x$};
+        \draw[->] (0,0) -- (0,12) node[left] {$y$};
+        \node[left] at (0,10) {$1$};
+        \node[below] at (10,0) {$1$};
+        \pgfmathsetmacro\xa{-5 + 5*sqrt(5)}
+        \filldraw[blue, very thick, fill opacity=0.3, samples=20]
+            (0,10) -- plot[domain=0:\xa] (\x, {10-\x}) -- plot[domain=\xa:0] (\x, {\x*\x/10}) -- cycle;
+        \node at (5,9) {\large $A\setminus B$};
+        \pgfmathsetmacro\ya{10 - \xa}
+        \draw[dotted] (\xa,\ya) -- (\xa,0);
+        \draw[dotted] (\xa,\ya) -- (0,\ya);
+        \node[left] at (0,\ya) {$y_*$};
+        \node[below] at (\xa,0) {$x_*$};
+    \end{tikzpicture}
+    \end{minipage}
+    &
+    \begin{minipage}{0.3\textwidth}
+    \begin{tikzpicture}[x=0.3cm,y=0.3cm,baseline=(current bounding box.center)]
+        \draw[->] (0,0) -- (12,0) node[below] {$x$};
+        \draw[->] (0,0) -- (0,12) node[left] {$y$};
+        \node[left] at (0,10) {$1$};
+        \node[below] at (10,0) {$1$};
+        \pgfmathsetmacro\xa{-5 + 5*sqrt(5)}
+        \filldraw[blue, very thick, fill opacity=0.3, samples=20]
+            (10,0) -- plot[domain=10:\xa] (\x, {10-\x}) -- plot[domain=\xa:10] (\x, {\x*\x/10}) -- (10,0) -- cycle;
+        \node at (5,9) {\large $\overline{A}\cap\overline{B}$};
+        \pgfmathsetmacro\ya{10 - \xa}
+        \draw[dotted] (\xa,\ya) -- (\xa,0);
+        \draw[dotted] (\xa,\ya) -- (0,\ya);
+        \node[left] at (0,\ya) {$y_*$};
+        \node[below] at (\xa,0) {$x_*$};
+    \end{tikzpicture}
+    \end{minipage}
+    \end{tabular}
+    \end{center}
+    To draw $A\cup B$, $A\cap B$, $A\setminus B$, and $\overline{A}\cap\overline{B}$ we need to find the intersection point $(x_*,y_*)$ of the graphs of $y=1-x$ and $y=x^2$.
+    For that purpose we set $x^2=1-x$, and solve for $x$ to get $x=\frac{-1\pm\sqrt5}{2}$. We need the one between $0$ and $1$, hence $x_*=\frac{\sqrt5-1}{2}$.
+    Plugging in either one of the equations we get $y_*=\frac{3-\sqrt5}{2}$ Hence the intersection point is $(\frac{\sqrt5-1}{2},\frac{3-\sqrt5}{2})$.
+    \[
+        \PP(A) = \frac{|A|}{|\Omega|}=|A|=\int_0^11-x\,dx=\frac12,
+    \]
+    \[
+        \PP(B) = \frac{|B|}{|\Omega|}=|B|=\int_0^1x^2\,dx=\left[\frac{x^3}{3}\right]_0^1=\frac13-0=\frac13,
+    \]
+    \begin{align*}
+        \PP(A\cup B) &= \int_0^{x_*}1-x\,dx + \int_{x_*}^1x^2\,dx
+        = \left[x-\frac{x^2}{2}\right]_0^{x_*}+\left[\frac{x^3}{3}\right]_{x_*}^1
+        = x_*-\frac{x_*^2}{2}+\frac{1}{3}-\frac{x_*^3}{3} \\
+        &=x_*-\frac{1-x_*}{2}+\frac{1}{3}-\frac{2x_*-1}{3}
+        = \frac{3x_*-1}{2}+\frac{2(1-x_*)}{3} = \frac{5x_*+1}{6} \\
+        &= \frac{5\cdot\frac{\sqrt5-1}{2}+1}{6} = \frac{5\sqrt{5}-3}{12},
+    \end{align*}
+    \[
+        \PP(A\cap B)=\PP(A)+\PP(B)-\PP(A\cup B)=\frac12+\frac13-\frac{5\sqrt{5}-3}{12}=\frac{13-5\sqrt5}{12},
+    \]
+    \[
+        \PP(A\setminus B)=\PP(A)-\PP(A\cap B)=\frac12-\frac{13-5\sqrt5}{12}=\frac{6-(13-5\sqrt5)}{12}=\frac{5\sqrt5-7}{12},
+    \]
+    \[
+        \PP(\overline{A}\cap\overline{B})=\PP(\overline{A\cup B})=1-\PP(A\cup B)=1-\frac{5\sqrt5-3}{12}=\frac{15-5\sqrt5}{12}.
+    \]
+\end{sol}
