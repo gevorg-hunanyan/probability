@@ -409,6 +409,34 @@
     \]
 \end{sol}
 
-\begin{sol}{union-bound}
-    
+\begin{sol}{unit-circle-square}
+    \[
+    \PP(\text{point in square})=\frac{\text{area of square}}{\text{area of circle}}=\frac2\pi.
+    \]
+\end{sol}
+
+\begin{sol}{geometric2d}
+    \begin{minipage}{0.69\textwidth}
+    In the geometric probability model the sample space is the square $\Omega=[0,1]^2$. We choose a random point $(x,y)$ and calculate $|x-y|$. The probability that $|x-y|<\alpha$ is the area of the region satisfying this condition, which can be split into the conditions $x-y<\alpha$ and $x-y>-\alpha$. The corresponding region $A$ for the case $\alpha=0.3$ is shown in the picture. The probability is therefore
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.3\textwidth}
+    \centering
+    \begin{tikzpicture}[x=0.3cm,y=0.3cm,baseline=(current bounding box.center)]
+        \draw[->] (0,0) -- (12,0);
+        \draw[->] (0,0) -- (0,12);
+        \node[left] at (0,10) {$1$};
+        \node[below] at (10,0) {$1$};
+        \filldraw[blue, very thick, fill opacity=0.3]
+            (0,0) -- (3,0) -- (10,7) -- (10,10) -- (7,10) -- (0,3) -- cycle;
+        \node at (5,5) {\large $A$};
+        \draw[dotted] (10,0) -- (10,10);
+        \draw[dotted] (0,10) -- (10,10);
+        \node[left] at (0,3) {$\alpha$};
+        \node[below] at (3,0) {$\alpha$};
+    \end{tikzpicture}
+    \end{minipage}
+    \[
+        \PP(A)=1-\PP(\overline{A})=1-(1-\alpha)^2=1-1+2\alpha-\alpha^2=2\alpha-\alpha^2=(2-\alpha)\alpha.
+    \]
 \end{sol}
