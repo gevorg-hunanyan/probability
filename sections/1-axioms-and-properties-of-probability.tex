@@ -80,12 +80,6 @@ If $\mathcal{F}$ is a $\sigma$-algebra over $\Omega$ then the ordered pair $(\Om
     }
     \prob{inclusion-exclusion-simple}{Prove that $\mathbb{P}(A\cup B) = \mathbb{P}(A)+\mathbb{P}(B)-\mathbb{P}(A\cap B)$.}
     \prob{weirdlimit}{Find the probability $p_n$ that a randomly chosen number from the set $\{1,2,\ldots,n\}$ is divisible by a fixed positive integer $k$. Find $\displaystyle\lim_{n\rightarrow\infty}p_n$.}
-    \prob{union-bound}{
-        Prove the union bound (Boole's inequality):
-        \[
-            \mathbb{P}\left(\bigcup_{i=1}^{\infty}A_i\right)\le\sum_{i=1}^{\infty}\mathbb{P}(A_i).
-        \]
-    }
     \prob{unit-circle-square}{A point is chosen randomly inside the unit circle. Find the probability that the chosen point is inside a fixed square inscribed in the circle. Use the geometric probability model.}
     \prob{geometric4d}{Two points are randomly chosen in $\Omega=[0,1]$. Find the probability that the distance between those points is less than $\alpha\in(0,1)$. Use the geometric probability model.}
     \prob{polynom2}{
@@ -111,12 +105,18 @@ If $\mathcal{F}$ is a $\sigma$-algebra over $\Omega$ then the ordered pair $(\Om
         \]
     }
     \prob{stick-break-triangle}{
-        A stick of length 1 is randomly broken into three pieces. Find the probability that those three pieces can form a triangle. Use the geometric probability model.
+        A stick of length 1 is broken at two random points to form three pieces. Find the probability that those three pieces can form a triangle. Use the geometric probability model.
     }
     \prob{continuity}{
         Prove the continuity of probability for increasing sequences: if $A_1\subseteq A_2\subseteq\ldots$ then
         \[
             \mathbb{P}\left(\bigcup_{i=1}^{\infty}A_i\right) = \lim_{n\rightarrow\infty}\mathbb{P}(A_n).
+        \]
+    }
+    \prob{union-bound}{
+        Prove the union bound (Boole's inequality):
+        \[
+            \mathbb{P}\left(\bigcup_{i=1}^{\infty}A_i\right)\le\sum_{i=1}^{\infty}\mathbb{P}(A_i).
         \]
     }
     \prob{five-envelopes}{There are 5 different letters and 5 different envelopes. Each letter is placed in an envelope at random. What is the probability that no letter is placed in its correct envelope?}
