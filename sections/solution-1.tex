@@ -307,9 +307,7 @@
     \end{minipage}
     \end{tabular}
     \end{center}
-    To draw $A\cup B$, $A\cap B$, $A\setminus B$, and $\overline{A}\cap\overline{B}$ we need to find the intersection point $(x_*,y_*)$ of the graphs of $y=1-x$ and $y=x^2$.
-    For that purpose we set $x^2=1-x$, and solve for $x$ to get $x=\frac{-1\pm\sqrt5}{2}$. We need the one between $0$ and $1$, hence $x_*=\frac{\sqrt5-1}{2}$.
-    Plugging in either one of the equations we get $y_*=\frac{3-\sqrt5}{2}$ Hence the intersection point is $(\frac{\sqrt5-1}{2},\frac{3-\sqrt5}{2})$.
+    To draw $A\cup B$, $A\cap B$, $A\setminus B$, and $\overline{A}\cap\overline{B}$ we need to find the intersection point $(x_*,y_*)$ of the graphs of $y=1-x$ and $y=x^2$. For that purpose we set $x^2=1-x$, and solve for $x$ to get $x=\frac{-1\pm\sqrt5}{2}$. We need the one between $0$ and $1$, hence $x_*=\frac{\sqrt5-1}{2}$. Plugging in either one of the equations we get $y_*=\frac{3-\sqrt5}{2}$ Hence the intersection point is $(\frac{\sqrt5-1}{2},\frac{3-\sqrt5}{2})$.
     \[
         \PP(A) = \frac{|A|}{|\Omega|}=|A|=\int_0^11-x\,dx=\frac12,
     \]
@@ -333,4 +331,58 @@
     \[
         \PP(\overline{A}\cap\overline{B})=\PP(\overline{A\cup B})=1-\PP(A\cup B)=1-\frac{5\sqrt5-3}{12}=\frac{15-5\sqrt5}{12}.
     \]
+\end{sol}
+
+\begin{sol}{polynom1}
+    Let $\Omega=\{1,2,\ldots,6\} ^3$. There are $6^3=216$ outcomes in $\Omega$.
+    \begin{enumerate}
+        \item[(a)] Let $A$ be the event of the roots being real. Then $\{(a,b,c)\in\Omega\mid b^2-4ac\ge0$\}. The condition $b^2-4ac\ge0$ is equivalent to $ac\le\frac{b^2}{4}$. Note that $\frac{b^2}{4}$ is at most $9$, therefore so is $ac$. Now we list the number of $(a,c)$ pairs for which $ac=k$, where $1\le k\le9$:
+        \begin{align*}
+            ac=1\quad&:\quad\text{1 pair}:\quad(1,1),\\
+            ac=2\quad&:\quad\text{2 pairs}:\quad(1,2),(2,1),\\
+            ac=3\quad&:\quad\text{2 pairs}:\quad(1,3),(3,1),\\
+            ac=4\quad&:\quad\text{3 pairs}:\quad(1,4),(2,2),(4,1),\\
+            ac=5\quad&:\quad\text{2 pairs}:\quad(1,5),(5,1),\\
+            ac=6\quad&:\quad\text{4 pairs}:\quad(1,6),(2,3),(3,2),(6,1),\\
+            ac=7\quad&:\quad\text{0 pairs},\\
+            ac=8\quad&:\quad\text{2 pairs}:\quad(2,4),(4,2),\\
+            ac=9\quad&:\quad\text{1 pair}:\quad(3,3).
+        \end{align*}
+        Then for each value of $b$ we can count how many of these pairs satisfy $ac\le\frac{b^2}{4}$.
+        \begin{align*}
+            &b=1\quad\Longrightarrow\quad\left\lfloor b^2/4\right\rfloor=0
+            \quad\Longrightarrow\quad 0\\
+            &b=2\quad\Longrightarrow\quad\left\lfloor b^2/4\right\rfloor=1
+            \quad\Longrightarrow\quad 1\\
+            &b=3\quad\Longrightarrow\quad\left\lfloor b^2/4\right\rfloor=2
+            \quad\Longrightarrow\quad 1+2=3\\
+            &b=4\quad\Longrightarrow\quad\left\lfloor b^2/4\right\rfloor=4
+            \quad\Longrightarrow\quad 1+2+2+3=8\\
+            &b=5\quad\Longrightarrow\quad\left\lfloor b^2/4\right\rfloor=6
+            \quad\Longrightarrow\quad 1+2+2+3+2+4=14\\
+            &b=6\quad\Longrightarrow\quad\left\lfloor b^2/4\right\rfloor=9
+            \quad\Longrightarrow\quad 1+2+2+3+2+4+2+1=17
+        \end{align*}
+        The number of favorable outcomes is $1+3+8+14+17=43$, so $\PP(A)=\frac{43}{216}\approx0.2$.
+        \item[(b)] The roots are rational if and only if $b^2-4ac$ is a perfect square. Considering the fact that $b^2-4ac\le b^2\le6^2=36$ we conclude that the only possible values are $0$, $1$, $4$, $9$, $16$, and $25$. Note that $b^2-4ac=k^2$ is equivalent to $ac=\frac{b^2-k^2}{4}$, so we can list the cases where $\frac{b^2-k^2}{4}$ is an integer and can be written as a product of $a$ and $c$:
+        \[
+        \begin{array}{c|c|c|c}
+            b & k & \frac{b^2-k^2}{4} & \#(a,c) \\
+            \hline
+            2 & 0 & 1 & 1 \\
+            3 & 1 & 2 & 2 \\
+            4 & 0 & 4 & 3 \\
+            4 & 2 & 3 & 2 \\
+            5 & 1 & 6 & 4 \\
+            5 & 3 & 4 & 3 \\
+            6 & 0 & 9 & 1 \\
+            6 & 2 & 8 & 2 \\
+            6 & 4 & 5 & 2
+        \end{array}
+        \]
+        The last column shows the number of pairs $(a,c)$ such that $ac=\frac{b^2-k^2}{4}$.
+        \[
+            \PP(\text{rational roots})=\frac{1+2+3+2+4+3+1+2+2}{216}=\frac{20}{216}=\frac{5}{54}.
+        \]
+    \end{enumerate}
 \end{sol}
