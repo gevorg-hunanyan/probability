@@ -1,1 +1,1 @@
-You can view <!-- PDF_LINK_START -->[the latest PDF](https://gevorg-hunanyan.github.io/probability/probability.pdf?rev=48904b2a8982f9c7bcbe800a8a1eed38bc9ccafb)<!-- PDF_LINK_END -->, automatically updated after each commit.
+You can view <!-- PDF_LINK_START -->[the latest PDF](https://gevorg-hunanyan.github.io/probability/probability.pdf?rev=bbcfd9ea7faecbdd0a6d2ddba285590e1746d83d)<!-- PDF_LINK_END -->, automatically updated after each commit.
