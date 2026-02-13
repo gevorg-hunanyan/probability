@@ -386,3 +386,25 @@
         \]
     \end{enumerate}
 \end{sol}
+
+\begin{sol}{inclusion-exclusion-simple}
+    Observe that $A=(A\setminus B)\cup(A\cap B)$, with $A\setminus B$ and $A\cap B$ being disjoint. The same holds for $B=(B\setminus A)\cup(A\cap B)$, with $B\setminus A$ and $A\cap B$ being disjoint. This allows us to write
+    \[
+        \PP(A)=\PP(A\setminus B)+\PP(A\cap B),\qquad\PP(B)=\PP(B\setminus A)+\PP(A\cap B).
+    \]
+    Noting that $A\cup B=(A\setminus B)\cup(B\setminus A)\cup(A\cap B)$ and combining the two equations above we get
+    \[
+        \PP(A)+\PP(B)=\PP(A\setminus B)+\PP(A\cap B)+\PP(B\setminus A)+\PP(A\cap B)=\PP(A\cup B)+\PP(A\cap B).
+    \]
+\end{sol}
+
+\begin{sol}{weirdlimit}
+    Obviously, there are exactly $\left\lfloor\frac{n}{k}\right\rfloor$ numbers in $\{1,2,\ldots,n\}$ that are divisible by $k$ (which are $k, 2k, \ldots, \left\lfloor n/k\right\rfloor k$). Therefore
+    \[
+        p_n=\frac{\left\lfloor n/k\right\rfloor}{n}.
+    \]
+    For the limit, write $n=qk+r$ with $0\le r<k$. Then $\lfloor n/k\rfloor=q$, so
+    \[
+        p_n=\frac{q}{qk+r}=\frac{1}{k+r/q}\longrightarrow\frac{1}{k}.
+    \]
+\end{sol}
