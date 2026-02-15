@@ -28,14 +28,27 @@
 \end{minipage}}
 
 \begin{enumerate}[resume=prob]
-    \prob{twodice-5}{Two dice are rolled. Find the probability that both of them show 5, given that the sum of shown numbers is divisible by 5.}
-    \prob{twodice-6-given-sum-8}{Two dice are rolled. Find the probability that at least one of them shows 6, given that the sum of shown numbers is 8.}
-    \prob{threedice-distinct}{Three dice are rolled. Find the probability of at least one of them showing 6, given that all three of them are showing distinct numbers.}
-    \prob{prove-conditional}{Prove that $\mathbb{P}(B\mid A)>\mathbb{P}(B)$ given that $\mathbb{P}(A\mid B)>\mathbb{P}(A)$, $\mathbb{P}(A)\ne0$, $\mathbb{P}(B)\ne0$.}
-    \prob{independent-subset}{Let $A$ and $B$ be independent events and $A\subseteq B$. Prove that $\mathbb{P}(A)=0$ or $\mathbb{P}(B)=1$.}
-    \prob{independent-with-itself}{Prove that if the event $A$ is independent with itself, then $\mathbb{P}(A)=0$ or $\mathbb{P}(A)=1$.}
-    \prob{}{Prove that if $\mathbb{P}(B\mid A)=\mathbb{P}(B\mid\overline{A})$ (assuming $\mathbb{P}(A)\ne0$ and $\mathbb{P}(B)\ne0$) then $A$ and $B$ are independent.}
-    \prob{bowl-probabilities}{First bowl contains 5 white, 11 black and 8 red balls, second bowl contains 10 white, 8 black and 6 red balls. One ball is taken randomly from each bowl. Find the probability that the chosen balls have the same color.}
+    \prob{twodice-5}{
+        Two dice are rolled. Find the probability that both of them show 5, given that the sum of shown numbers is divisible by 5.
+    }
+    \prob{twodice-6-given-sum-8}{
+        Two dice are rolled. Find the probability that at least one of them shows 6, given that the sum of shown numbers is 8.
+    }
+    \prob{threedice-distinct}{
+        Three dice are rolled. Find the probability of at least one of them showing 6, given that all three of them are showing distinct numbers.
+    }
+    \prob{prove-conditional}{
+        Prove that $\mathbb{P}(B\mid A)>\mathbb{P}(B)$ given that $\mathbb{P}(A\mid B)>\mathbb{P}(A)$, $\mathbb{P}(A)\ne0$, $\mathbb{P}(B)\ne0$.
+    }
+    \prob{independent-subset}{
+        Let $A$ and $B$ be independent events and $A\subseteq B$. Prove that $\mathbb{P}(A)=0$ or $\mathbb{P}(B)=1$.
+    }
+    \prob{independent-with-itself}{
+        Prove that if the event $A$ is independent with itself, then $\mathbb{P}(A)=0$ or $\mathbb{P}(A)=1$.}
+    \prob{}{
+        Prove that if $\mathbb{P}(B\mid A)=\mathbb{P}(B\mid\overline{A})$, assuming $\mathbb{P}(A)\ne0$ and $\mathbb{P}(B)\ne0$, then $A$ and $B$ are independent.}
+    \prob{bowl-probabilities}{
+        First bowl contains 5 white, 11 black and 8 red balls, second bowl contains 10 white, 8 black and 6 red balls. One ball is taken randomly from each bowl. Find the probability that the chosen balls have the same color.}
     \prob{pairwise-not-mutual}{
         Two dice are rolled. Consider the events
         \begin{align*}
@@ -45,7 +58,8 @@
         \end{align*}
         Prove that the events $A_1,A_2,A_3$ are pairwise independent but not mutually independent.
     }
-    \prob{not-all-same}{A bowl contains 2 white, 3 black and 5 red balls. Three balls are taken from the bowl in a random manner. Find the probability that not all three of them have the same color.}
+    \prob{not-all-same}{
+        A bowl contains 2 white, 3 black and 5 red balls. Three balls are taken from the bowl in a random manner. Find the probability that not all three of them have the same color.}
     \prob{two-shooters}{
         Two shooters shoot once at a target. The probabilities of first and second shooters hitting the target are 0.7 and 0.8, respectively. Find the probability that the target
         \begin{enumerate}
@@ -53,8 +67,10 @@
             \item was hit exactly once.
         \end{enumerate}
     }
-    \prob{five-points-circle-square}{A square is inscribed in a circle. Five points are chosen randomly inside the circle. Find the probability that one of the points will end up in the square and the remaining 4 all in different segments.}
-    \prob{student-library}{A student looking for a book decided to visit three independently operated libraries. The probability that the student will find the desired book in each library is 0.5. The probability that the book will be occupied by another student is 0.5 for each library. Is it more likely that the student will get the book or not.}
+    \prob{five-points-circle-square}{
+        A square is inscribed in a circle. Five points are chosen randomly inside the circle. Find the probability that one of the points will end up in the square and the remaining 4 all in different segments.}
+    \prob{student-library}{
+        A student looking for a book decided to visit three independently operated libraries. The probability that the student will find the desired book in each library is 0.5. The probability that the book will be occupied by another student is 0.5 for each library. Is it more likely that the student will get the book or not.}
     \prob{ineq1}{
         Prove the following inequality, where $A$ and $B$ are any events:
         \[
@@ -67,8 +83,12 @@
             \mathbb{P}(A\cup B)\mathbb{P}(A\cap B)\le\mathbb{P}(A)\mathbb{P}(B).
         \]
     }
-    \prob{maximization1}{Let $A,B,C$ be pairwise independent events, such that $A\cap B\cap C=\varnothing$. Find the maximum possible value of $\mathbb{P}(A)$.}
-
+    \prob{maximization1}{
+        Let $A,B,C$ be pairwise independent events, such that $A\cap B\cap C=\varnothing$. Find the maximum possible value of $\mathbb{P}(A)$.
+    }
+    \prob{counter1}{
+        Prove or disprove $\PP(B\mid A)+\PP(B\mid\overline{A})=1$, where $A$ and $B$ are arbitrary events.
+    }
     \prob{factory3}{
         A factory produces three types of batteries:
         \begin{itemize}
@@ -76,12 +96,12 @@
             \item 30\% are of type $B$, with a 90\% chance of being functional.
             \item 20\% are of type $C$, with an 80\% chance of being functional.
         \end{itemize}
-        If a battery is selected at random, what is the probability that it is functional?
+        Find the probability that a random battery is functional.
     }
-    \prob{}{
-        All three bowls contain 4 white and 6 black balls. A random ball was moved from the first bowl to the second, then a random ball was moved from the second bowl to the third. Find the probability that a randomly chosen ball from the third bowl is white.
+    \prob{bowls3}{
+        All three bowls contain $3$ white and $7$ black balls. A random ball was moved from the first bowl to the second, then a random ball was moved from the second bowl to the third. Find the probability that a randomly chosen ball from the third bowl is white.
     }
-    \prob{}{
+    \prob{bowlsinduction}{
         Generalize and prove the previous problem for $N$ bowls.
     }
     \prob{}{

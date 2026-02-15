@@ -90,3 +90,150 @@
 \begin{sol}{student-library}
     Since the probability that the student will find the book in a library is $0.5$, and the probability that the book will be occupied is $0.5$, the probability of the student obtaining the book at a library is $0.25$. Hence the probability that the student will not get the book in a library is $1-0.25=0.75$. Because the libraries are independently operated, the probability that the student does not obtain the book after visiting all three libraries is $(0.75)^3=\frac{27}{64}\approx0.42$. Therefore it is more likely that the student will get the book.
 \end{sol}
+
+\begin{sol}{ineq1}
+    Without loss of generality assume $\PP(A)\le\PP(B)$. Then $\PP(A\cap B)\le\PP(A)\le\PP(B)$. We will prove the inequalities $\PP(A\cap B)-\PP(A)\PP(B)\le\frac14$ and $\PP(A)\PP(B)-\PP(A\cap B)\le\frac14$, which together will imply $\left|\PP(A\cap B)-\PP(A)\PP(B)\right|\le\frac14$.
+    \[
+        \PP(A\cap B)-\PP(A)\PP(B)\le\PP(A)-\PP(A)\PP(B)\le\PP(A)-\PP(A)^2\le\frac14,
+    \]
+    because if $x\in[0,1]$ $x-x^2\le\frac14$. The inequality $\PP(A\cap B)-\PP(A)\PP(B)\le\frac14$ is proved.
+    
+    To prove $\PP(A)\PP(B)-\PP(A\cap B)\le\frac14$ we will consider the cases $\PP(A)+\PP(B)\le1$ and $\PP(A)+\PP(B)\ge1$. If $\PP(A)+\PP(B)\le1$, which is the same as $\PP(B)\le1-\PP(A)$ then
+    \[
+        \PP(A)\PP(B)-\PP(A\cap B)\le\PP(A)\PP(B)\le\PP(A)(1-\PP(A))\le\frac14,
+    \]
+    and if $\PP(A)+\PP(B)\ge1$, which is the same as $1-\PP(B)\le\PP(A)$ then
+    \begin{align*}
+        \PP(A)\PP(B)-\PP(A\cap B)&\le\PP(A)\PP(B)-(\PP(A)+\PP(B)-1)\\
+        &=(1-\PP(A))(1-\PP(B))\le\PP(A)(1-\PP(A))\le\frac14
+    \end{align*}
+    because $\PP(A\cap B)=\PP(A)+\PP(B)-\PP(A\cup B)\ge\PP(A)+\PP(B)-1$.
+\end{sol}
+
+\begin{sol}{ineq2}
+    \begin{align*}
+        \PP(A)\PP(B)-\PP(A\cup B)\PP(A\cap B)=\PP(A)\PP(B)-(\PP(A)+\PP(B)-\PP(A\cap B))\PP(A\cap B)\\
+        =\PP(A)\PP(B)-\PP(A)\PP(A\cap B)-\PP(B)\PP(A\cap B)+\PP(A\cap B)^2\\
+        =(\PP(A)-\PP(A\cap B))(\PP(B)-\PP(A\cap B)).
+    \end{align*}
+\end{sol}
+
+\begin{sol}{maximization1}
+    Let $A=\Omega$ and $B=\varnothing$. Then $A,B,C$ are pairwise independent (because any event is independent with $\Omega$ and $\varnothing$), and $A\cap B\cap C=\varnothing$. Hence, the maximum possible value of $\PP(A)$ is $1$.
+\end{sol}
+
+\begin{sol}{counter1}
+    Let $\Omega=\{x,y,z\}$, $\PP(x)=\PP(y)=\PP(z)=\frac13$, and $A=\{x,y\}$, $B=\{x\}$. Then
+    \[
+        \PP(B\mid A)+\PP(B\mid\overline{A})=\frac{\PP(A\cap B)}{\PP(A)}+\frac{\PP(\overline{A}\cap B)}{\PP(\overline{A})}=\frac{\PP(B)}{\PP(A)}+\frac{\PP(\varnothing)}{\PP(\overline{A})}=\frac{1/3}{2/3}+0=\frac12.
+    \]
+\end{sol}
+
+\begin{sol}{factory3}
+    Given $\PP(A)=0.5$, $\PP(B)=0.3$, $\PP(C)=0.2$, $\PP(F\mid A)=0.95$, $\PP(F\mid B)=0.9$, and $\PP(F\mid C)=0.8$, we are required to find $\PP(F)$. The law of total probability implies
+    \begin{align*}
+        \PP(F)&=\PP(F\cap A)+\PP(F\cap B)+\PP(F\cap C)\\
+        &=\PP(F\mid A)\PP(A)+\PP(F\mid B)\PP(B)+\PP(F\mid C)\PP(C)\\
+        &=0.95\cdot0.5+0.9\cdot0.3+0.8\cdot0.2=0.905.
+    \end{align*}
+\end{sol}
+
+\begin{sol}{bowls3}
+    Let $W_i$ be the event of removing a white ball from the $i$th bowl, and $B_i$ be the event of removing a black ball. Then we have the following tree diagram.
+    \begin{center}
+        \begin{tikzpicture}[scale=0.5]
+            \pgfmathsetmacro{\w}{8}
+            \pgfmathsetmacro{\r}{0.9}
+            \pgfmathsetmacro{\s}{0.7}
+
+            \draw[line width=2pt] (0,0) -- (\w,4*\s);
+            \draw[line width=2pt] (0,0) -- (\w,-4*\s);
+
+            \draw[line width=2pt] (\w,4*\s) -- (2*\w,6*\s);
+            \draw[line width=2pt] (\w,4*\s) -- (2*\w,2*\s);
+            \draw[line width=2pt] (\w,-4*\s) -- (2*\w,-2*\s);
+            \draw[line width=2pt] (\w,-4*\s) -- (2*\w,-6*\s);
+            
+            \draw[line width=2pt] (2*\w,6*\s) -- (3*\w+1,7*\s);
+            \draw[line width=2pt] (2*\w,6*\s) -- (3*\w-1,5*\s);
+            \draw[line width=2pt] (2*\w,2*\s) -- (3*\w+1,3*\s);
+            \draw[line width=2pt] (2*\w,2*\s) -- (3*\w-1,1*\s);
+            \draw[line width=2pt] (2*\w,-2*\s) -- (3*\w+1,-1*\s);
+            \draw[line width=2pt] (2*\w,-2*\s) -- (3*\w-1,-3*\s);
+            \draw[line width=2pt] (2*\w,-6*\s) -- (3*\w+1,-5*\s);
+            \draw[line width=2pt] (2*\w,-6*\s) -- (3*\w-1,-7*\s);
+
+            \draw[fill=white, line width=2pt] (0,0) circle (\r);
+            
+            \draw[fill=white, line width=2pt] (\w,4*\s) circle (\r);
+            \draw[fill=white, line width=2pt] (\w,-4*\s) circle (\r);
+
+            \draw[fill=white, line width=2pt] (2*\w,6*\s) circle (\r);
+            \draw[fill=white, line width=2pt] (2*\w,2*\s) circle (\r);
+            \draw[fill=white, line width=2pt] (2*\w,-2*\s) circle (\r);
+            \draw[fill=white, line width=2pt] (2*\w,-6*\s) circle (\r);
+
+            \draw[fill=white, line width=2pt] (3*\w+1,7*\s) circle (\r);
+            \draw[fill=white, line width=2pt] (3*\w-1,5*\s) circle (\r);
+            \draw[fill=white, line width=2pt] (3*\w+1,3*\s) circle (\r);
+            \draw[fill=white, line width=2pt] (3*\w-1,1*\s) circle (\r);
+            \draw[fill=white, line width=2pt] (3*\w+1,-1*\s) circle (\r);
+            \draw[fill=white, line width=2pt] (3*\w-1,-3*\s) circle (\r);
+            \draw[fill=white, line width=2pt] (3*\w+1,-5*\s) circle (\r);
+            \draw[fill=white, line width=2pt] (3*\w-1,-7*\s) circle (\r);
+
+            \node at (0,0) {$\Omega$};
+
+            \node at (\w,4*\s) {$W_1$};
+            \node at (\w,-4*\s) {$B_1$};
+            
+            \node at (2*\w,6*\s) {$W_2$};
+            \node at (2*\w,2*\s) {$B_2$};
+            \node at (2*\w,-2*\s) {$W_2$};
+            \node at (2*\w,-6*\s) {$B_2$};
+            
+            \node at (3*\w+1,7*\s) {$W_3$};
+            \node at (3*\w-1,5*\s) {$B_3$};
+            \node at (3*\w+1,3*\s) {$W_3$};
+            \node at (3*\w-1,1*\s) {$B_3$};
+            \node at (3*\w+1,-1*\s) {$W_3$};
+            \node at (3*\w-1,-3*\s) {$B_3$};
+            \node at (3*\w+1,-5*\s) {$W_3$};
+            \node at (3*\w-1,-7*\s) {$B_3$};
+
+            \node at (0.5*\w,3*\s) {$3/10$};
+            \node at (0.5*\w,-3*\s) {$7/10$};
+            
+            \node at (1.5*\w,6*\s) {$4/11$};
+            \node at (1.5*\w,2*\s-0.1) {$7/11$};
+            \node at (1.5*\w,-2*\s) {$3/11$};
+            \node at (1.5*\w,-6*\s-0.1) {$8/11$};
+            
+            \node at (2.5*\w+1,7*\s+0.3) {$4/11$};
+            \node at (2.5*\w-1,5*\s-0.3) {$7/11$};
+            \node at (2.5*\w+1,3*\s+0.3) {$3/11$};
+            \node at (2.5*\w-1,1*\s-0.3) {$8/11$};
+            \node at (2.5*\w+1,-1*\s+0.3) {$4/11$};
+            \node at (2.5*\w-1,-3*\s-0.3) {$7/11$};
+            \node at (2.5*\w+1,-5*\s+0.3) {$3/11$};
+            \node at (2.5*\w-1,-7*\s-0.3) {$8/11$};
+        \end{tikzpicture}
+    \end{center}
+    The law of total probability implies
+    \begin{align*}
+        \PP(W_3)&=\PP(W_1\cap W_2\cap W_3)+\PP(W_1\cap B_2\cap W_3)+\PP(B_1\cap W_2\cap W_3)+\PP(B_1\cap B_2\cap W_3)\\
+        &=\PP(W_1)\PP(W_2\mid W_1)\PP(W_3\mid W_2)+\cdots+\PP(B_1)\PP(B_2\mid B_1)\PP(W_3\mid B_2)\\
+        &=\frac{3}{10}\cdot\frac{4}{11}\cdot\frac{4}{11}+\frac{3}{10}\cdot\frac{7}{11}\cdot\frac{3}{11}+\frac{7}{10}\cdot\frac{3}{11}\cdot\frac{4}{11}+\frac{7}{10}\cdot\frac{8}{11}\cdot\frac{3}{11}=\frac{363}{1210}=\frac{3}{10}.
+    \end{align*}
+\end{sol}
+
+\begin{sol}{bowlsinduction}
+    We saw in the previous problem that the probability of removing a white ball from the third bowl does not depend on whether or not we add a ball to it from the second bowl. Perhaps we could prove by induction that it is still $\frac{3}{10}$ for $N$ bowls. An even more general statement would be to say that if each of the $N$ bowls contains $n$ white balls and $m$ black balls, and we do the procedure described in the previous problem, then the probability that we remove a white ball from the last bowl is $\frac{n}{n+m}$. Base case is obvious for a single bowl. For the induction step assume it holds for $N-1$ bowls: $\PP(W_{N-1})=\frac{n}{n+m}$. Then
+    \begin{align*}
+        \PP(W_{N})&=\PP(W_{N-1}\cap W_N)+\PP(B_{N-1}\cap W_N)\\
+        &=\PP(W_{N-1})\PP(W_N\mid W_{N-1})+\PP(B_{N-1})\PP(W_N\mid B_{N-1})\\
+        &=\frac{n}{n+m}\cdot\frac{n+1}{n+m+1}+\frac{m}{n+m}\cdot\frac{n}{n+m+1}\\
+        &=\frac{n(n+1)+nm}{(n+m)(n+m+1)}=\frac{n(n+m+1)}{(n+m)(n+m+1)}=\frac{n}{n+m},
+    \end{align*}
+    which concludes the proof.
+\end{sol}
