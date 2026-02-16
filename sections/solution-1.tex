@@ -45,11 +45,10 @@
      The sample space is the triangle $\Omega=\{(x,y)\mid 10\le x\le y\le 20\}$.
     \noindent
     \begin{center}
-    \begin{tabular}{cc}
-    
-    \begin{minipage}{0.45\textwidth}
-    \hphantom{(a)}\hspace{4pt}
-    \begin{tikzpicture}[x=0.45cm,y=0.45cm,baseline=(current bounding box.center)]
+    \begin{tabular}{ccc}
+    \begin{minipage}{0.3\textwidth}
+    \hphantom{(a)}
+    \begin{tikzpicture}[x=0.3cm,y=0.3cm,baseline=(current bounding box.center)]
         \draw[->] (0,0) -- (12,0) node[below] {$x$};
         \draw[->] (0,0) -- (0,12) node[left] {$y$};
         \draw (5,5) -- (10,10) -- (5,10) -- cycle;
@@ -62,13 +61,13 @@
         \node[below] at (10.25,0) {$20$};
         \node[below] at (5,0) {$10$};
         \filldraw[blue, very thick, fill opacity=0.3] (5,5) -- (10,10) -- (5,10) -- cycle;
-        \node at (6.5,8.5) {\huge $\Omega$};
+        \node at (6.5,8.5) {\Large $\Omega$};
     \end{tikzpicture}
     \end{minipage}
     &
-    \begin{minipage}{0.45\textwidth}
-    \textbf{(a)}\hspace{4pt}
-    \begin{tikzpicture}[x=0.45cm,y=0.45cm,baseline=(current bounding box.center)]
+    \begin{minipage}{0.3\textwidth}
+    \textbf{(a)}
+    \begin{tikzpicture}[x=0.3cm,y=0.3cm,baseline=(current bounding box.center)]
         \draw[->] (0,0) -- (12,0) node[below] {$x$};
         \draw[->] (0,0) -- (0,12) node[left] {$y$};
         \draw (5,5) -- (10,10) -- (5,10) -- cycle;
@@ -77,20 +76,20 @@
         \draw[dotted] (10,0) -- (10,10);
         \draw[dotted] (0,10) -- (5,10);
         \node[left] at (0,10) {$20$};
-        \node[left] at (0,5) {$10$};
-        \node[below] at (10.25,0) {$20$};
+        \node[left] at (0,4.75) {$10$};
+        \node[below] at (10.5,0) {$20$};
         \node[below] at (5,0) {$10$};
         \filldraw[blue, very thick, fill opacity=0.3] (5,5) -- (10,10) -- (9,10) -- (5,6) -- cycle;
         \draw[dotted] (0,6) -- (5,6);
         \draw[dotted] (9,0) -- (9,9);
-        \node[left] at (0,6) {$12$};
-        \node[below] at (8.75,0) {$18$};
+        \node[left] at (0,6.25) {$12$};
+        \node[below] at (8.5,0) {$18$};
     \end{tikzpicture}
     \end{minipage}
-    \\[8mm]
-    \begin{minipage}{0.45\textwidth}
-    \textbf{(b)}\hspace{4pt}
-    \begin{tikzpicture}[x=0.45cm,y=0.45cm,baseline=(current bounding box.center)]
+    &
+    \begin{minipage}{0.3\textwidth}
+    \textbf{(b)}
+    \begin{tikzpicture}[x=0.3cm,y=0.3cm,baseline=(current bounding box.center)]
         \draw[->] (0,0) -- (12,0) node[below] {$x$};
         \draw[->] (0,0) -- (0,12) node[left] {$y$};
         \draw (5,5) -- (10,10) -- (5,10) -- cycle;
@@ -109,10 +108,10 @@
         \node[below] at (7.5,0) {$15$};
     \end{tikzpicture}
     \end{minipage}
-    &
-    \begin{minipage}{0.45\textwidth}
-    \textbf{(c)}\hspace{4pt}
-    \begin{tikzpicture}[x=0.45cm,y=0.45cm,baseline=(current bounding box.center)]
+    \\[8mm]
+    \begin{minipage}{0.3\textwidth}
+    \textbf{(c)}
+    \begin{tikzpicture}[x=0.3cm,y=0.3cm,baseline=(current bounding box.center)]
         \draw[->] (0,0) -- (12,0) node[below] {$x$};
         \draw[->] (0,0) -- (0,12) node[left] {$y$};
         \draw (5,5) -- (10,10) -- (5,10) -- cycle;
@@ -131,10 +130,10 @@
         \node[below] at (7,0) {$14$};
     \end{tikzpicture}
     \end{minipage}
-    \\[8mm]
-    \begin{minipage}{0.45\textwidth}
-    \textbf{(d)}\hspace{4pt}
-    \begin{tikzpicture}[x=0.45cm,y=0.45cm,baseline=(current bounding box.center)]
+    &
+    \begin{minipage}{0.3\textwidth}
+    \textbf{(d)}
+    \begin{tikzpicture}[x=0.3cm,y=0.3cm,baseline=(current bounding box.center)]
         \draw[->] (0,0) -- (12,0) node[below] {$x$};
         \draw[->] (0,0) -- (0,12) node[left] {$y$};
         \draw (5,5) -- (10,10) -- (5,10) -- cycle;
@@ -154,9 +153,9 @@
     \end{tikzpicture}
     \end{minipage}
     &
-    \begin{minipage}{0.45\textwidth}
-    \textbf{(e)}\hspace{4pt}
-    \begin{tikzpicture}[x=0.45cm,y=0.45cm,baseline=(current bounding box.center)]
+    \begin{minipage}{0.3\textwidth}
+    \textbf{(e)}
+    \begin{tikzpicture}[x=0.3cm,y=0.3cm,baseline=(current bounding box.center)]
         \draw[->] (0,0) -- (12,0) node[below] {$x$};
         \draw[->] (0,0) -- (0,12) node[left] {$y$};
         \draw (5,5) -- (10,10) -- (5,10) -- cycle;
@@ -178,6 +177,16 @@
     \end{tabular}
     \end{center}
     (try to find mathematical justifications for these shapes).
+\end{sol}
+
+\begin{sol}{shopofsamplespaces2}
+    \begin{align*}
+        \PP(A)&=\frac{50-32}{50}=\frac{18}{50}=\frac{9}{25},\\
+        \PP(B)&=\frac{1}{2},\\
+        \PP(C)&=\frac{16}{50}=\frac{8}{25},\\
+        \PP(D)&=\frac{50-16}{50}=\frac{34}{50}=\frac{17}{25},\\
+        \PP(E)&=\frac{1}{2}.
+    \end{align*}
 \end{sol}
 
 \begin{sol}{complement-probability}
@@ -437,5 +446,109 @@
     In the geometric probability model the sample space is the square $\Omega=[0,1]^2$. We choose a random point $(x,y)$ and calculate $|x-y|$. The probability that $|x-y|<\alpha$ is the area of the region satisfying this condition, which can be split into the conditions $x-y<\alpha$ and $x-y>-\alpha$. The corresponding region $A$ for the case $\alpha=0.3$ is shown in the picture. The probability is therefore
     \[
         \PP(A)=1-\PP(\overline{A})=1-(1-\alpha)^2=1-1+2\alpha-\alpha^2=2\alpha-\alpha^2=(2-\alpha)\alpha.
+    \]
+\end{sol}
+
+\begin{sol}{polynom2}
+    \begin{wrapfigure}{r}{0.2\textwidth}
+    \centering
+    \resizebox{\linewidth}{!}{
+        \begin{tikzpicture}[x=0.3cm,y=0.3cm,baseline=(current bounding box.center)]
+            \draw[->] (0,0) -- (12,0);
+            \draw[->] (0,0) -- (0,12);
+            \node[left] at (0,10) {$1$};
+            \node[below] at (10,0) {$1$};
+            \node[left] at (0,12) {$b$};
+            \node[below] at (12,0) {$c$};
+            \filldraw[blue, very thick, fill opacity=0.3, samples=20, domain=0:10]
+                (0,0)
+                -- plot (\x, {\x*\x/40})
+                -- (10,0)
+                -- cycle;
+            \draw[dotted] (10,0) -- (10,10);
+            \draw[dotted] (0,10) -- (10,10);
+        \end{tikzpicture}
+    }
+    \end{wrapfigure}
+    The roots of the equation $x^2+bx+c=0$ are real if and only if $b^2-4c\ge0$, or equivalently $c\le\frac{b^2}{4}$. The set of $(b,c)$ pairs in $[0,1]^2$ satisfying this condition is shown in the picture. The area of $\Omega$ is $1$, hence the probability is
+    \[
+        \PP(\text{real roots}) = \int_{0}^{1}\frac{b^2}{4}\,db=\frac{1}{3\cdot4}=\frac{1}{12}.
+    \]
+    Now let $x_1,x_2$ be the roots of the equation. By Vieta's formula we have $x_1+x_2=-b$, but in our sample space $b\in[0,1]$, which implies that $x_1+x_2\le0$, therefore at least one of the roots is not positive. The probability of having two positive roots is $0$.
+\end{sol}
+
+\begin{sol}{polynom3}
+    The roots of the equation $x^2+2ax+b=0$ are real if and only if $(2a)^2-4b\ge0$, which is equivalent to $b\le a^2$. The set of such $(a,b)\in[-1,1]^2$ pais is shown in the left picture below.
+    The area of this region is
+    \[
+        2+\int_{-1}^1a^2\,da=2+2\int_0^1a^2\,da=2+2\left[\frac{a^3}{3}\right]_0^1=2+\frac23=\frac83,
+    \]
+    and the area of $\Omega$ is $4$, therefore
+    \[
+        \PP(\text{real roots})=\frac{8/3}{4}=\frac{8}{12}=\frac{2}{3}.
+    \]
+    \begin{center}
+    \begin{tikzpicture}[scale=2]
+        \draw[->] (-1.4,0) -- (1.4,0);
+        \draw[->] (0,-1.4) -- (0,1.4);
+        \filldraw[blue, very thick, fill opacity=0.3, samples=20, domain=-1:1]
+            (-1,-1) -- (1,-1) -- (1,1) -- plot[domain=1:-1] (\x, {\x*\x}) -- cycle;
+        \draw[dotted] (-1,-1) rectangle (1,1);
+        \node[below] at (1.4,0) {$a$};
+        \node[right] at (0,1.4) {$b$};
+    \end{tikzpicture}
+    \hspace{1cm}
+    \begin{tikzpicture}[scale=2]
+        \draw[->] (-1.4,0) -- (1.4,0);
+        \draw[->] (0,-1.4) -- (0,1.4);
+        \filldraw[blue, very thick, fill opacity=0.3, samples=20, domain=-1:0]
+            (-1,0) -- (0,0) -- plot[domain=0:-1] (\x, {\x*\x}) -- cycle;
+        \draw[dotted] (-1,-1) rectangle (1,1);
+        \node[below] at (1.4,0) {$a$};
+        \node[right] at (0,1.4) {$b$};
+    \end{tikzpicture}
+    \end{center}
+    For the roots $x_1,x_2$ to be positive we need them to be real, that is $b\le a^2$, have positive sum $x_1+x_2=-2a>0$, and positive product $x_1x_2=b>0$. The set of such $(a,b)$ pairs is shown on the right. Therefore
+    \[
+        \PP(\text{positive roots})=\frac14\int_{-1}^0a^2\,da=\frac14\cdot\frac13=\frac{1}{12}.
+    \]
+\end{sol}
+
+\begin{sol}{stick-break-triangle}
+    Let $\Omega=\{(x_1,x_2)\mid0\le x_1\le x_2\le1\}$. Any pair $(x_1,x_2)\in\Omega$ shows the two coordinates at which the stick $[0,1]$ is broken. The resulting pieces $[0,x_1]$, $[x_1,x_2]$, and $[x_2,1]$ form a triangle if and only if the sum of the lengths of any two is greater than the length of the third side. This means that we need to enforce the conditions
+    \begin{wrapfigure}{r}{0.2\textwidth}
+    \centering
+    \resizebox{\linewidth}{!}{
+        \begin{tikzpicture}[x=0.3cm,y=0.3cm,baseline=(current bounding box.center)]
+            \draw[->] (0,0) -- (12,0);
+            \draw[->] (0,0) -- (0,12);
+            \node[left] at (0,9.5) {$1$};
+            \node[left] at (0,11) {$x_2$};
+            \node[below] at (11,0) {$x_1$};
+            \filldraw[blue, very thick, fill opacity=0.3]
+                (5,5) -- (5,10) -- (0,5) -- cycle;
+            \draw[dotted] (0,0) -- (10,10);
+            \draw[dotted] (0,10) -- (10,10);
+        \end{tikzpicture}
+    }
+    \end{wrapfigure}
+    \[
+        \begin{cases}
+            x_2\ge1-x_2,\\
+            1-x_1\ge x_1,\\
+            x_1+1-x_2\ge x_2-x_1.
+        \end{cases}\Longrightarrow\begin{cases}
+            x_2\ge\frac12,\\
+            x_1\le\frac12,\\
+            x_2\le x_1+\frac12.
+        \end{cases}
+    \]
+    Putting all conditions together and removing redundancies we have
+    \[
+        \textstyle0\le x_1\le\frac12\le x_2\le x_1+\frac12.
+    \]
+    The corresponding region is shown in the picture. The probability is therefore:
+    \[
+        \PP(\text{triangle})=\frac14.
     \]
 \end{sol}

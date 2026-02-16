@@ -83,12 +83,12 @@ If $\mathcal{F}$ is a $\sigma$-algebra over $\Omega$ then the ordered pair $(\Om
     \prob{unit-circle-square}{A point is chosen randomly inside the unit circle. Find the probability that the chosen point is inside a fixed square inscribed in the circle. Use the geometric probability model.}
     \prob{geometric2d}{Two points are randomly chosen in $[0,1]$. Find the probability that the distance between those points is less than $\alpha\in(0,1)$. Use the geometric probability model.}
     \prob{polynom2}{
-        Find the probability that the roots of the equation $x^2+ax+b=0$ are
+        Find the probability that the roots of the equation $x^2+bx+c=0$ are
         \begin{enumerate}
             \item real,
             \item positive,
         \end{enumerate}
-        if the coefficients $0\le a\le 1$ and $0\le b\le 1$ are chosen randomly. Use the geometric probability model.
+        if the coefficients $0\le b\le 1$ and $0\le c\le 1$ are chosen randomly. Use the geometric probability model.
     }
     \prob{polynom3}{
         Find the probability that the roots of the equation $x^2+2ax+b=0$ are
@@ -97,12 +97,6 @@ If $\mathcal{F}$ is a $\sigma$-algebra over $\Omega$ then the ordered pair $(\Om
             \item positive,
         \end{enumerate}
         if the coefficients are chosen randomly and $|a|\le1$, $|b|\le1$.
-    }
-    \prob{incl-excl-proof}{
-        Prove the inclusion-exclusion principle for probability:
-        \[
-            \mathbb{P}\left(\bigcup_{i=1}^{n}A_i\right) = \sum_{i=1}^{n}\left((-1)^{i-1}\sum_{k_1<\ldots<k_i} \bigcup_{l=1}^{i}A_l\right)
-        \]
     }
     \prob{stick-break-triangle}{
         A stick of length 1 is broken at two random points to form three pieces. Find the probability that those three pieces can form a triangle. Use the geometric probability model.
@@ -119,7 +113,16 @@ If $\mathcal{F}$ is a $\sigma$-algebra over $\Omega$ then the ordered pair $(\Om
             \mathbb{P}\left(\bigcup_{i=1}^{\infty}A_i\right)\le\sum_{i=1}^{\infty}\mathbb{P}(A_i).
         \]
     }
-    \prob{five-envelopes}{There are 5 different letters and 5 different envelopes. Each letter is placed in an envelope at random. What is the probability that no letter is placed in its correct envelope?}
-    \prob{polynom4}{Find the probability of the roots of the equation $ax^2+bx+c=0$ being real if the coefficients are chosen randomly in the cube $0<a\le1$, $0<b\le1$, $0<c\le1$. Use the geometric probability model.}
-    \prob{nonmeasurable}{Prove that it is not possible to define a probability on the experiment $([0,1],2^{[0,1]})$ such that the probability of any interval is its length.}
+    \prob{five-envelopes}{
+        There are 5 different letters and 5 different envelopes. Each letter is placed in an envelope at random. What is the probability that no letter is placed in its correct envelope?
+    }
+    \prob{polynom4}{
+        Find the probability of the roots of the equation $ax^2+bx+c=0$ being real if the coefficients are chosen randomly in the cube $0<a\le1$, $0<b\le1$, $0<c\le1$. Use the geometric probability model.
+    }
+    \prob{nonmeasurable}{
+        Prove that it is not possible to define a translation-invariant probability $\PP$ on the experiment $([0,1),2^{[0,1)})$ such that the probability of any interval is its length. Translation invariance means that for any $x\in\RR$ and any $A\in2^{[0,1)}$, we have
+        \[
+            \PP(A)=\PP(\{a+x\mod1\mid a\in A\}).
+        \]
+    }
 \end{enumerate}
