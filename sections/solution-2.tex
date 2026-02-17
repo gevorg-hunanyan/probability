@@ -237,3 +237,47 @@
     \end{align*}
     which concludes the proof.
 \end{sol}
+
+\begin{sol}{box15balls}
+    Let $X$ and $Y$ be the number of new balls drawn on the first and second days, respectively, and let $k\in\{0,1,2,3\}$. Then
+    \[
+        \PP(X=k)=\frac{\binom{9}{k}\binom{6}{3-k}}{\binom{15}{3}}.
+    \]
+    After returning these balls we will have $9-k$ new balls, so
+    \[
+        \PP(Y=3\mid X=k)=\frac{\binom{9-k}{3}}{\binom{15}{3}},
+    \]
+    and it follows from the law of total probability, that
+    \[
+        \PP(Y=3)=\sum_{k=0}^{3}\PP(X=k)\PP(Y=3\mid X=k)=\sum_{k=0}^{3}\frac{\binom{9}{k}\binom{6}{3-k}}{\binom{15}{3}}\cdot\frac{\binom{9-k}{3}}{\binom{15}{3}}=\frac{528}{5915}\approx9\%.
+    \]
+\end{sol}
+
+\begin{sol}{witness-taxi}
+    \[
+        \PP(A\mid\text{blue})=\frac{\PP(blue\mid A)\PP(A)}{\PP(blue\mid A)\PP(A)+\PP(blue\mid B)\PP(B)}=\frac{0.8\cdot0.85}{0.8\cdot0.85+0.4\cdot0.15}=\frac{34}{37}\approx92\%.
+    \]
+\end{sol}
+
+\begin{sol}{disease-bayes}
+    We are given $\PP(D)=0.01$, $\PP(+\mid D)=0.95$, $\PP(+\mid\overline{D})=1-0.9=0.1$. Then
+    \[
+        \PP(D\mid+)=\frac{\PP(+\mid D)\PP(D)}{\PP(+\mid D)\PP(D)+\PP(+\mid\overline{D})\PP(\overline{D})}=\frac{0.95\cdot0.01}{0.95\cdot0.01+0.1\cdot0.99}=\frac{19}{217}\approx9\%.
+    \]
+\end{sol}
+
+\begin{sol}{factories1}
+    \[
+        \PP(A\mid H)=\frac{\PP(H\mid A)\PP(A)}{\PP(H\mid A)\PP(A)+\PP(H\mid B)\PP(B)}=\frac{0.6\cdot2/3}{0.6\cdot2/3+0.84\cdot1/3}=\frac{10}{17}\approx59\%.
+    \]
+\end{sol}
+
+\begin{sol}{subsets-disjoint}
+    coming soon
+\end{sol}
+
+\begin{sol}{casino30binom}
+    \[
+        \PP(10\le X\le20)=\sum_{k=10}^{20}\binom{50}{k}(0.3)^k(0.7)^{50-k}\approx91\%.
+    \]
+\end{sol}
