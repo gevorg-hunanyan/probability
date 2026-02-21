@@ -17,6 +17,7 @@
 *.snm
 *.vrb
 *.pdf
+!images/front-cover.pdf
 
 # Build folders
 _build/
